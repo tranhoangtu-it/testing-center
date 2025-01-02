@@ -1,6 +1,8 @@
 import React from 'react';
 import { Question } from '../../types/exam';
 import { cn } from '../../lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from '../ui/button';
 
 interface QuestionListProps {
   questions: Question[];
@@ -15,6 +17,18 @@ const QuestionList: React.FC<QuestionListProps> = ({
   answers,
   onQuestionSelect,
 }) => {
+  const goToNextQuestion = () => {
+    if (currentIndex < questions.length - 1) {
+      onQuestionSelect(currentIndex + 1);
+    }
+  };
+
+  const goToPreviousQuestion = () => {
+    if (currentIndex > 0) {
+      onQuestionSelect(currentIndex - 1);
+    }
+  };
+
   const getQuestionStatus = (index: number) => {
     if (currentIndex === index) return 'current';
     if (answers[index]?.length > 0) return 'answered';
@@ -26,13 +40,12 @@ const QuestionList: React.FC<QuestionListProps> = ({
       case 'current':
         return 'bg-blue-600 text-white font-bold';
       case 'answered':
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-500 text-white';
       default:
         return 'bg-white text-gray-800 hover:bg-gray-50';
     }
   };
 
-  // Create array of 20 rows with 5 questions each
   const rows = Array.from({ length: 20 }, (_, rowIndex) => {
     return Array.from({ length: 5 }, (_, colIndex) => {
       const questionIndex = rowIndex * 5 + colIndex;
@@ -42,7 +55,27 @@ const QuestionList: React.FC<QuestionListProps> = ({
 
   return (
     <div className="h-full flex flex-col">
-      <h3 className="text-lg font-bold mb-4 text-gray-900">Question List</h3>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-bold text-gray-900">Question List</h3>
+        <div className="flex space-x-2">
+          <Button
+            onClick={goToPreviousQuestion}
+            disabled={currentIndex === 0}
+            className="p-2"
+            variant="outline"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </Button>
+          <Button
+            onClick={goToNextQuestion}
+            disabled={currentIndex === questions.length - 1}
+            className="p-2"
+            variant="outline"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
       
       <div className="grid gap-2">
         {rows.map((row, rowIndex) => (
@@ -66,21 +99,6 @@ const QuestionList: React.FC<QuestionListProps> = ({
             })}
           </div>
         ))}
-      </div>
-
-      <div className="mt-4 grid grid-cols-3 gap-2 text-xs">
-        <div className="flex items-center">
-          <div className="w-3 h-3 rounded-full bg-white border border-gray-300 mr-2"></div>
-          <span>Not answered</span>
-        </div>
-        <div className="flex items-center">
-          <div className="w-3 h-3 rounded-full bg-green-100 mr-2"></div>
-          <span>Answered</span>
-        </div>
-        <div className="flex items-center">
-          <div className="w-3 h-3 rounded-full bg-blue-600 mr-2"></div>
-          <span>Current</span>
-        </div>
       </div>
     </div>
   );

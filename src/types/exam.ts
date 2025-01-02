@@ -31,3 +31,10 @@ export interface ExamState {
   isComplete: boolean;
   hasFailed: boolean;
 }
+
+export interface ExamInfo {
+  id: string;
+  name: string;
+  description: string;
+  filename: string;
+}

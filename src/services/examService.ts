@@ -1,4 +1,4 @@
-import { Exam, ExamSetupData, Question } from '../types/exam';
+import { Exam, ExamSetupData, Question, ExamInfo } from '../types/exam';
 
 export const examService = {
   /**
@@ -6,23 +6,40 @@ export const examService = {
    */
   async loadExam(examId: string): Promise<Exam> {
     try {
-      console.log('Loading exam:', examId);
-      const response = await fetch(`/exams/${examId}.json`);
-      console.log('Response status:', response.status);
+      // First load exams list to get filename
+      const examsList = await this.loadExamsList();
+      const examInfo = examsList.find(exam => exam.id === examId);
       
+      if (!examInfo) {
+        throw new Error(`Exam with ID ${examId} not found`);
+      }
+
+      // Load the specific exam file
+      const response = await fetch(`/exams/${examInfo.filename}`);
       if (!response.ok) {
-        throw new Error(`Failed to load exam: ${response.status} ${response.statusText}`);
+        throw new Error(`Failed to load exam: ${response.status}`);
       }
       
-      const data = await response.json();
-      console.log('Exam data loaded:', data);
-      return data;
+      const examData = await response.json();
+      return examData;
     } catch (error) {
       console.error('Error loading exam:', error);
       throw error;
     }
   },
-
+  async loadExamsList(): Promise<ExamInfo[]> {
+    try {
+      const response = await fetch('/exams/exams.json');
+      if (!response.ok) {
+        throw new Error('Failed to load exams list');
+      }
+      const data = await response.json();
+      return data.exams;
+    } catch (error) {
+      console.error('Error loading exams list:', error);
+      throw error;
+    }
+  },
   /**
    * Validates exam setup data
    */

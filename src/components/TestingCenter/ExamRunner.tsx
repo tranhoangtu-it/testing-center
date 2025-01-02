@@ -4,8 +4,10 @@ import { Exam } from '../../types/exam';
 import QuestionDisplay from './QuestionDisplay';
 import QuestionList from './QuestionList';
 import Timer from './Timer';
+import ExamReview from './ExamReview';
 import { examService } from '../../services/examService';
 import { Button } from '../ui/button';
+import { CheckCircle, AlertCircle } from 'lucide-react';
 
 interface ExamRunnerProps {
   exam: Exam;
@@ -25,6 +27,7 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
   const [remainingTime, setRemainingTime] = useState(timeLimit * 3600);
   const [randomizedQuestions, setRandomizedQuestions] = useState(examService.prepareQuestions(exam.questions, 100));
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
+  const [showReview, setShowReview] = useState(false);
 
   const { elementRef } = useFullscreen({
     onExit: onFail
@@ -35,7 +38,7 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
       setRemainingTime((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          onComplete(answers);
+          handleTimeUp();
           return 0;
         }
         return prev - 1;
@@ -43,7 +46,11 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [answers, onComplete]);
+  }, [answers]);
+
+  const handleTimeUp = () => {
+    setShowReview(true);
+  };
 
   const handleAnswerSelect = (answerId: number) => {
     const question = randomizedQuestions[currentQuestionIndex];
@@ -72,8 +79,23 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
   };
 
   const confirmSubmit = () => {
+    setShowSubmitConfirm(false);
+    setShowReview(true);
+  };
+
+  const handleFinishReview = () => {
     onComplete(answers);
   };
+
+  if (showReview) {
+    return (
+      <ExamReview
+        questions={randomizedQuestions}
+        answers={answers}
+        onClose={handleFinishReview}
+      />
+    );
+  }
 
   return (
     <div ref={elementRef} className="min-h-screen flex bg-gray-100">
@@ -116,25 +138,29 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
       {/* Submit Confirmation Modal */}
       {showSubmitConfirm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg shadow-xl max-w-md">
-            <h3 className="text-xl font-bold mb-4">Confirm Submission</h3>
-            <p className="mb-6">
-              Are you sure you want to submit your exam?<br />
-              You have answered {Object.keys(answers).length} out of {randomizedQuestions.length} questions.
-            </p>
+          <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
+            <div className="text-center">
+              <AlertCircle className="mx-auto h-12 w-12 text-yellow-500 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Confirm Submission</h3>
+              <p className="mb-6 text-gray-600">
+                Are you sure you want to submit your exam?<br />
+                You have answered {Object.keys(answers).length} out of {randomizedQuestions.length} questions.
+              </p>
+            </div>
+
             <div className="flex space-x-4">
               <Button
                 onClick={() => setShowSubmitConfirm(false)}
                 variant="outline"
                 className="w-full"
               >
-                Cancel
+                Continue Exam
               </Button>
               <Button
                 onClick={confirmSubmit}
                 className="w-full bg-green-600 hover:bg-green-700 text-white"
               >
-                Submit
+                Submit Now
               </Button>
             </div>
           </div>

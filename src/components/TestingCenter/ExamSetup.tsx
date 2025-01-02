@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ExamSetupData } from '../../types/exam';
+import { ExamInfo } from '../../services/examService';
+import { examService } from '../../services/examService';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Select } from '../ui/select';
@@ -18,19 +20,30 @@ const ExamSetup: React.FC<ExamSetupProps> = ({ onStart }) => {
   });
 
   const [errors, setErrors] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [exams, setExams] = useState<ExamInfo[]>([]);
+
+  useEffect(() => {
+    loadExams();
+  }, []);
+
+  const loadExams = async () => {
+    try {
+      setLoading(true);
+      const examsList = await examService.loadExamsList();
+      setExams(examsList);
+    } catch (error) {
+      setErrors(['Failed to load exams list']);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors([]);
 
-    const validationErrors: string[] = [];
-    if (!formData.examId) {
-      validationErrors.push('Vui lòng chọn môn thi');
-    }
-    if (!formData.candidateName.trim()) {
-      validationErrors.push('Vui lòng nhập tên thí sinh');
-    }
-    
+    const validationErrors = examService.validateExamSetup(formData);
     if (validationErrors.length > 0) {
       setErrors(validationErrors);
       return;
@@ -38,6 +51,17 @@ const ExamSetup: React.FC<ExamSetupProps> = ({ onStart }) => {
 
     onStart(formData);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading exams...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -62,12 +86,18 @@ const ExamSetup: React.FC<ExamSetupProps> = ({ onStart }) => {
               onChange={(e) => setFormData(prev => ({ ...prev, examId: e.target.value }))}
               options={[
                 { value: '', label: 'Chọn môn thi' },
-                { value: 'hl7', label: 'HL7-FHIR' },
-                { value: 'physics', label: 'Vật lý' },
-                { value: 'chemistry', label: 'Hóa học' },
+                ...exams.map(exam => ({
+                  value: exam.id,
+                  label: exam.name
+                }))
               ]}
               className="w-3/4 text-center text-gray-900"
             />
+            {formData.examId && (
+              <p className="text-sm text-gray-600">
+                {exams.find(exam => exam.id === formData.examId)?.description}
+              </p>
+            )}
           </div>
 
           {/* Tên thí sinh */}
@@ -83,6 +113,7 @@ const ExamSetup: React.FC<ExamSetupProps> = ({ onStart }) => {
               value={formData.candidateName}
               onChange={(e) => setFormData(prev => ({ ...prev, candidateName: e.target.value }))}
               placeholder="Nhập tên của bạn"
+              className="w-full text-gray-900"
             />
           </div>
 
@@ -101,6 +132,7 @@ const ExamSetup: React.FC<ExamSetupProps> = ({ onStart }) => {
                 max={100}
                 value={formData.questionCount}
                 onChange={(e) => setFormData(prev => ({ ...prev, questionCount: parseInt(e.target.value) }))}
+                className="w-full text-gray-900"
               />
             </div>
 
@@ -118,10 +150,12 @@ const ExamSetup: React.FC<ExamSetupProps> = ({ onStart }) => {
                 max={5}
                 value={formData.timeLimit}
                 onChange={(e) => setFormData(prev => ({ ...prev, timeLimit: parseInt(e.target.value) }))}
+                className="w-full text-gray-900"
               />
             </div>
           </div>
 
+          {/* Error messages */}
           {errors.length > 0 && (
             <div className="bg-red-50 border-2 border-red-200 p-4 rounded-lg">
               {errors.map((error, index) => (
@@ -132,14 +166,27 @@ const ExamSetup: React.FC<ExamSetupProps> = ({ onStart }) => {
             </div>
           )}
 
+          {/* Submit button */}
           <Button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-3"
+            className={`
+              w-full bg-blue-600 hover:bg-blue-700 text-white text-lg
+              py-3 rounded-lg font-semibold
+              transition-all transform hover:scale-[1.02] active:scale-[0.98]
+              disabled:opacity-50 disabled:cursor-not-allowed
+            `}
             disabled={!formData.examId || !formData.candidateName}
           >
             Bắt đầu thi
           </Button>
         </form>
+
+        {/* Helper text */}
+        <div className="mt-6 text-center">
+          <p className="text-base text-gray-600">
+            Hãy đảm bảo bạn đã sẵn sàng trước khi bắt đầu bài thi
+          </p>
+        </div>
       </div>
     </div>
   );
