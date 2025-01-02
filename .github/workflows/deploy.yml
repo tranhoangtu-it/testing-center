@@ -3,7 +3,7 @@ name: Deploy Vite App to GitHub Pages
 on:
   push:
     branches:
-      - main  # Deploy khi có thay đổi trên nhánh 'main'
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16  # Sử dụng phiên bản Node.js phù hợp
+          node-version: 16
 
       - name: Install dependencies
         run: npm install
