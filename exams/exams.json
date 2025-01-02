@@ -1,0 +1,22 @@
+{
+    "exams": [
+      {
+        "id": "hl7-fhir",
+        "name": "HL7 FHIR Fundamentals",
+        "description": "Basic concepts and principles of HL7 FHIR",
+        "filename": "hl7-fhir.json"
+      },
+      {
+        "id": "pmp",
+        "name": "Project Management Professional",
+        "description": "Basic concepts and principles of Project Management Professional",
+        "filename": "pmp.json"
+      },
+      {
+        "id": "AWS",
+        "name": "Amazon Web Services",
+        "description": "Basic concepts and principles of Amazon Web Services",
+        "filename": "aws.json" 
+      }
+    ]
+  }

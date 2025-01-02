@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    width="200"
+    height="200"
+    viewBox="0 0 200 200"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1">
+    <!-- Hình tròn bao quanh -->
+    <circle 
+        cx="100" 
+        cy="100" 
+        r="90" 
+        fill="#007BFF" 
+    />
+    <!-- Text "BU2 - Ominext" ở giữa -->
+    <text
+        x="100"
+        y="105"
+        text-anchor="middle" 
+        alignment-baseline="middle"
+        font-family="Arial"
+        font-size="90"
+        fill="#ffffff"
+        font-weight="bold"
+        >
+        BU2
+    </text>
+</svg>
