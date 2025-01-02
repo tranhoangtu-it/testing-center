@@ -10,7 +10,7 @@ export const examService = {
         throw new Error(`Exam with ID ${examId} not found`);
       }
 
-      const response = await fetch(`/exams/${examInfo.filename}`);
+      const response = await fetch(`/testing-center/exams/${examInfo.filename}`);
       if (!response.ok) {
         throw new Error(`Failed to load exam: ${response.status}`);
       }
@@ -25,7 +25,7 @@ export const examService = {
 
   async loadExamsList(): Promise<ExamInfo[]> {
     try {
-      const response = await fetch('/exams/exams.json');
+      const response = await fetch('/testing-center/exams/exams.json');
       if (!response.ok) {
         throw new Error('Failed to load exams list');
       }
