@@ -1,12 +1,8 @@
 import { Exam, ExamSetupData, Question, ExamInfo } from '../types/exam';
 
 export const examService = {
-  /**
-   * Loads exam data from a JSON file
-   */
   async loadExam(examId: string): Promise<Exam> {
     try {
-      // First load exams list to get filename
       const examsList = await this.loadExamsList();
       const examInfo = examsList.find(exam => exam.id === examId);
       
@@ -14,7 +10,6 @@ export const examService = {
         throw new Error(`Exam with ID ${examId} not found`);
       }
 
-      // Load the specific exam file
       const response = await fetch(`/exams/${examInfo.filename}`);
       if (!response.ok) {
         throw new Error(`Failed to load exam: ${response.status}`);
@@ -27,6 +22,7 @@ export const examService = {
       throw error;
     }
   },
+
   async loadExamsList(): Promise<ExamInfo[]> {
     try {
       const response = await fetch('/exams/exams.json');
@@ -40,11 +36,8 @@ export const examService = {
       throw error;
     }
   },
-  /**
-   * Validates exam setup data
-   */
+
   validateExamSetup(setup: ExamSetupData): string[] {
-    console.log('Validating exam setup:', setup);
     const errors: string[] = [];
     
     if (!setup.examId) {
@@ -63,13 +56,9 @@ export const examService = {
       errors.push('Thời gian làm bài phải từ 1 đến 5 giờ');
     }
     
-    console.log('Validation errors:', errors);
     return errors;
   },
 
-  /**
-   * Calculates exam score
-   */
   calculateScore(questions: Question[], answers: Record<number, number[]>): {
     score: number;
     correctAnswers: number;
@@ -79,14 +68,7 @@ export const examService = {
 
     questions.forEach((question, index) => {
       const userAnswers = answers[index] || [];
-      const correctAnswers = question.correctAnswers;
-
-      // Check if arrays have same length and same elements (order doesn't matter)
-      if (
-        userAnswers.length === correctAnswers.length &&
-        userAnswers.every(answer => correctAnswers.includes(answer)) &&
-        correctAnswers.every(answer => userAnswers.includes(answer))
-      ) {
+      if (this.validateAnswer(question, userAnswers)) {
         correct++;
       }
     });
@@ -99,30 +81,44 @@ export const examService = {
     };
   },
 
-  /**
-   * Shuffles questions and limits them to the requested count
-   */
   prepareQuestions(questions: Question[], count: number): Question[] {
-    // Shuffle questions using Fisher-Yates algorithm
     const shuffled = [...questions];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
 
-    // Limit to requested count
-    return shuffled.slice(0, count);
+    return shuffled.slice(0, Math.min(count, shuffled.length));
   },
 
-  /**
-   * Gets exam statistics
-   */
+  validateAnswer(question: Question, userAnswers: number[]): boolean {
+    if (!userAnswers?.length) return false;
+
+    // Convert userAnswers to be 1-based index like in the data
+    const adjustedUserAnswers = userAnswers.map(ans => ans + 1);
+    
+    // For single choice questions
+    if (question.type === 'single') {
+      return adjustedUserAnswers[0] === question.correctAnswers[0];
+    }
+
+    // For multiple choice questions
+    // First check if the number of selected answers matches
+    if (adjustedUserAnswers.length !== question.correctAnswers.length) {
+      return false;
+    }
+
+    // Then check if all answers match (order doesn't matter)
+    const sortedUserAnswers = [...adjustedUserAnswers].sort((a, b) => a - b);
+    const sortedCorrectAnswers = [...question.correctAnswers].sort((a, b) => a - b);
+    return JSON.stringify(sortedUserAnswers) === JSON.stringify(sortedCorrectAnswers);
+  },
+
   getExamStats(questions: Question[], answers: Record<number, number[]>) {
     const totalQuestions = questions.length;
     const answeredQuestions = Object.keys(answers).length;
     const remainingQuestions = totalQuestions - answeredQuestions;
 
-    // Calculate category stats
     const categoryStats: Record<string, { total: number; answered: number }> = {};
     questions.forEach((question, index) => {
       if (!categoryStats[question.category]) {
@@ -134,7 +130,6 @@ export const examService = {
       }
     });
 
-    // Calculate difficulty stats
     const difficultyStats: Record<string, { total: number; answered: number }> = {};
     questions.forEach((question, index) => {
       if (!difficultyStats[question.difficulty]) {
@@ -158,25 +153,6 @@ export const examService = {
     };
   },
 
-  /**
-   * Validates an answer for a question
-   */
-  validateAnswer(question: Question, selectedAnswers: number[]): boolean {
-    if (question.type === 'single' && selectedAnswers.length !== 1) {
-      return false;
-    }
-
-    // For both single and multiple choice, check if selected answers match correct answers
-    return (
-      selectedAnswers.length === question.correctAnswers.length &&
-      selectedAnswers.every(answer => question.correctAnswers.includes(answer)) &&
-      question.correctAnswers.every(answer => selectedAnswers.includes(answer))
-    );
-  },
-
-  /**
-   * Formats time remaining into a string
-   */
   formatTimeRemaining(seconds: number): string {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
@@ -186,18 +162,4 @@ export const examService = {
       .map(v => v.toString().padStart(2, '0'))
       .join(':');
   },
-
-  /**
-   * Checks if the exam should auto-submit based on current state
-   */
-  shouldAutoSubmit(timeRemaining: number, answers: Record<number, number[]>, totalQuestions: number): boolean {
-    // Auto-submit conditions:
-    // 1. Time has run out
-    if (timeRemaining <= 0) return true;
-
-    // 2. All questions have been answered
-    if (Object.keys(answers).length === totalQuestions) return true;
-
-    return false;
-  }
 };

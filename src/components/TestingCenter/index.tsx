@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Exam, ExamSetupData } from '../../types/exam';
+import { Exam, ExamSetupData, ExamResult } from '../../types/exam';
 import { examService } from '../../services/examService';
 import ExamSetup from './ExamSetup';
 import ExamRunner from './ExamRunner';
@@ -10,10 +10,7 @@ const TestingCenter: React.FC = () => {
   const [exam, setExam] = useState<Exam | null>(null);
   const [examSetup, setExamSetup] = useState<ExamSetupData | null>(null);
   const [hasFailed, setHasFailed] = useState(false);
-  const [examResult, setExamResult] = useState<{
-    score: number;
-    correctAnswers: number;
-  } | null>(null);
+  const [examResult, setExamResult] = useState<ExamResult | null>(null);
 
   const handleStart = async (setupData: ExamSetupData) => {
     try {
@@ -25,21 +22,16 @@ const TestingCenter: React.FC = () => {
     }
   };
 
-  const handleComplete = (answers: Record<number, number[]>) => {
-    if (!exam) return;
-    
-    const result = {
-      score: (Object.keys(answers).length / exam.questions.length) * 100,
-      correctAnswers: Object.keys(answers).length
-    };
-    
+  const handleComplete = (result: ExamResult) => {
     setExamResult(result);
     setExam(null);
+    setExamSetup(null);
   };
 
   const handleFail = () => {
     setHasFailed(true);
     setExam(null);
+    setExamSetup(null);
   };
 
   const handleRestart = () => {
@@ -54,14 +46,7 @@ const TestingCenter: React.FC = () => {
   }
 
   if (examResult) {
-    return (
-      <ResultScreen
-        score={examResult.score}
-        correctAnswers={examResult.correctAnswers}
-        totalQuestions={exam?.questions.length || 0}
-        onRestart={handleRestart}
-      />
-    );
+    return <ResultScreen result={examResult} onRestart={handleRestart} />;
   }
 
   if (exam && examSetup) {
@@ -69,6 +54,7 @@ const TestingCenter: React.FC = () => {
       <ExamRunner
         exam={exam}
         timeLimit={examSetup.timeLimit}
+        questionCount={examSetup.questionCount}
         onComplete={handleComplete}
         onFail={handleFail}
       />

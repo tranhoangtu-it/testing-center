@@ -24,6 +24,12 @@ export interface ExamSetupData {
   timeLimit: number;
 }
 
+export interface ExamResult {
+  score: number;
+  correctAnswers: number;
+  totalQuestions: number;
+}
+
 export interface ExamState {
   currentQuestionIndex: number;
   answers: Record<number, number[]>;

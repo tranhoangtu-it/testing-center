@@ -1,33 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { useFullscreen } from '../../hooks/useFullScreen';
-import { Exam } from '../../types/exam';
+import { Exam, ExamResult } from '../../types/exam';
 import QuestionDisplay from './QuestionDisplay';
 import QuestionList from './QuestionList';
 import Timer from './Timer';
 import ExamReview from './ExamReview';
 import { examService } from '../../services/examService';
 import { Button } from '../ui/button';
-import { CheckCircle, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 
 interface ExamRunnerProps {
   exam: Exam;
   timeLimit: number;
-  onComplete: (answers: Record<number, number[]>) => void;
+  questionCount: number;
+  onComplete: (result: ExamResult) => void;
   onFail: () => void;
 }
 
 const ExamRunner: React.FC<ExamRunnerProps> = ({
   exam,
   timeLimit,
+  questionCount,
   onComplete,
   onFail,
 }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number[]>>({});
   const [remainingTime, setRemainingTime] = useState(timeLimit * 3600);
-  const [randomizedQuestions, setRandomizedQuestions] = useState(examService.prepareQuestions(exam.questions, 100));
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
   const [showReview, setShowReview] = useState(false);
+  const [randomizedQuestions, setRandomizedQuestions] = useState(() =>
+    examService.prepareQuestions(exam.questions, questionCount)
+  );
 
   const { elementRef } = useFullscreen({
     onExit: onFail
@@ -46,9 +50,10 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [answers]);
+  }, []);
 
   const handleTimeUp = () => {
+    setShowSubmitConfirm(false);
     setShowReview(true);
   };
 
@@ -84,8 +89,19 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
   };
 
   const handleFinishReview = () => {
-    onComplete(answers);
+    if (!randomizedQuestions) return;
+    
+    const result = examService.calculateScore(randomizedQuestions, answers);
+    onComplete({
+      score: result.score,
+      correctAnswers: result.correctAnswers,
+      totalQuestions: randomizedQuestions.length
+    });
   };
+
+  if (!randomizedQuestions || randomizedQuestions.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   if (showReview) {
     return (
@@ -99,7 +115,6 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
 
   return (
     <div ref={elementRef} className="min-h-screen flex bg-gray-100">
-      {/* Question Display Area - 70% width */}
       <div className="w-[70%] p-6 overflow-auto">
         <QuestionDisplay
           question={randomizedQuestions[currentQuestionIndex]}
@@ -109,7 +124,6 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
         />
       </div>
 
-      {/* Question List Area - 30% width */}
       <div className="w-[30%] bg-white shadow-lg flex flex-col">
         <div className="flex-grow overflow-auto p-4">
           <QuestionList
@@ -130,21 +144,20 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
             onClick={handleSubmit}
             className="w-full bg-green-600 hover:bg-green-700 text-white py-3"
           >
-            Submit Exam
+            Nộp bài
           </Button>
         </div>
       </div>
 
-      {/* Submit Confirmation Modal */}
       {showSubmitConfirm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg shadow-xl max-w-md w-full">
             <div className="text-center">
               <AlertCircle className="mx-auto h-12 w-12 text-yellow-500 mb-4" />
-              <h3 className="text-xl font-bold mb-2">Confirm Submission</h3>
+              <h3 className="text-xl font-bold mb-2">Xác nhận nộp bài</h3>
               <p className="mb-6 text-gray-600">
-                Are you sure you want to submit your exam?<br />
-                You have answered {Object.keys(answers).length} out of {randomizedQuestions.length} questions.
+                Bạn có chắc chắn muốn nộp bài?<br />
+                Bạn đã làm {Object.keys(answers).length} trong số {randomizedQuestions.length} câu hỏi.
               </p>
             </div>
 
@@ -154,13 +167,13 @@ const ExamRunner: React.FC<ExamRunnerProps> = ({
                 variant="outline"
                 className="w-full"
               >
-                Continue Exam
+                Tiếp tục làm bài
               </Button>
               <Button
                 onClick={confirmSubmit}
                 className="w-full bg-green-600 hover:bg-green-700 text-white"
               >
-                Submit Now
+                Nộp bài
               </Button>
             </div>
           </div>

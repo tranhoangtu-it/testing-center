@@ -1,26 +1,33 @@
 import React from 'react';
 import { CheckCircle, XCircle } from 'lucide-react';
 import { Button } from '../ui/button';
+import { ExamResult } from '../../types/exam';
 
 interface ResultScreenProps {
-  score: number;
-  correctAnswers: number;
-  totalQuestions: number;
+  result: ExamResult;
   onRestart: () => void;
 }
 
+const PASSING_SCORE = 60;
+const EXCELLENT_SCORE = 80;
+
 const ResultScreen: React.FC<ResultScreenProps> = ({
-  score,
-  correctAnswers,
-  totalQuestions,
+  result,
   onRestart,
 }) => {
-  const isPassing = score >= 60;
+  const { score, correctAnswers, totalQuestions } = result;
+  const isPassing = score >= PASSING_SCORE;
 
   const getScoreColor = () => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-blue-600';
+    if (score >= EXCELLENT_SCORE) return 'text-green-600';
+    if (score >= PASSING_SCORE) return 'text-blue-600';
     return 'text-red-600';
+  };
+
+  const getScoreText = () => {
+    if (score >= EXCELLENT_SCORE) return 'Xuất sắc';
+    if (score >= PASSING_SCORE) return 'Đạt';
+    return 'Không đạt';
   };
 
   return (
@@ -42,8 +49,12 @@ const ResultScreen: React.FC<ResultScreenProps> = ({
           </div>
 
           <div className="space-y-2 text-gray-600 mb-8">
-            <p>Số câu trả lời đúng: {correctAnswers}/{totalQuestions}</p>
-            <p>Trạng thái: {isPassing ? 'Đạt' : 'Không đạt'}</p>
+            <p className="font-medium text-lg">
+              Số câu trả lời đúng: {correctAnswers}/{totalQuestions}
+            </p>
+            <p className="font-medium text-lg">
+              Trạng thái: <span className={getScoreColor()}>{getScoreText()}</span>
+            </p>
           </div>
 
           <Button
