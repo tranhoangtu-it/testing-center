@@ -8579,13 +8579,13 @@
       "difficulty": "medium",
       "content": "What is the purpose of the 'searchParam' field in a CapabilityStatement?",
       "options": [
-        "To list the search parameters supported for a resource type",
         "To define the operations available on a resource type",
         "To describe the formats supported by the server",
+        "To list the search parameters supported for a resource type",
         "To log metadata about the server"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "type": "single"
     },
@@ -8611,13 +8611,13 @@
       "difficulty": "medium",
       "content": "What is the function of the 'ConceptMap' resource?",
       "options": [
-        "To map codes between different terminologies",
         "To define criteria for ValueSet expansion",
         "To log terminology usage",
-        "To validate resources"
+        "To validate resources",
+        "To map codes between different terminologies"
       ],
       "correctAnswers": [
-        1
+        4
       ],
       "type": "single"
     },
@@ -8643,13 +8643,13 @@
       "difficulty": "medium",
       "content": "What is the role of TLS in FHIR communications?",
       "options": [
-        "To encrypt data transmitted between the client and server",
         "To log interactions with the server",
         "To validate resource schemas",
+        "To encrypt data transmitted between the client and server",
         "To map terminology codes"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "type": "single"
     },
@@ -11240,13 +11240,13 @@
       "difficulty": "medium",
       "content": "A system needs to find all Observations with a specific LOINC code. Which search parameter is correct?",
       "options": [
-        "code=http://loinc.org|8480-6",
         "code=8480-6",
+        "code=http://loinc.org|8480-6",
         "loinc=8480-6",
         "system=loinc&code=8480-6"
       ],
       "correctAnswers": [
-        1
+        2
       ],
       "type": "single"
     },
@@ -11304,13 +11304,13 @@
       "difficulty": "medium",
       "content": "What is the correct approach for updating a resource when you don't have the latest version?",
       "options": [
-        "Use conditional update with if-match header",
         "Force update with new version",
         "Create a new resource",
+        "Use conditional update with if-match header",
         "Merge with existing resource"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "type": "single"
     },
@@ -12673,7 +12673,9 @@
         "sesion"
       ],
       "correctAnswers": [
-        1,2,3
+        1,
+        2,
+        3
       ],
       "type": "multi"
     },
@@ -12836,8 +12838,7 @@
         2
       ],
       "type": "single"
-    }
-    ,
+    },
     {
       "id": 806,
       "category": "",
@@ -12853,8 +12854,7 @@
         2
       ],
       "type": "single"
-    }
-    ,
+    },
     {
       "id": 807,
       "category": "",
@@ -12870,7 +12870,7 @@
         4
       ],
       "type": "single"
-    } ,
+    },
     {
       "id": 808,
       "category": "",
@@ -13046,7 +13046,8 @@
         3
       ],
       "type": "single"
-    },{
+    },
+    {
       "id": 819,
       "category": "healthcare",
       "difficulty": "medium",
@@ -13897,7 +13898,2159 @@
         1
       ],
       "type": "single"
+    },
+    {
+      "id": 873,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What is the first resource in the Message bundle type?",
+      "options": [
+        "Domain Resource",
+        "Message Header",
+        "Patient",
+        "Event"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 874,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What controls the exchange of content of the messages between source and target?",
+      "options": [
+        "Agreement",
+        "Capability statement",
+        "Contract",
+        "Profiles"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 875,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The impact of the content of a message which represents a response to query for current information.",
+      "options": [
+        "Currency",
+        "Consequence",
+        "Notification",
+        "Retrospective"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 876,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "When it is necessary to receive an acknowledgement from multiple parties for a message of notification it becomes a message of:",
+      "options": [
+        "Currency",
+        "Consequence",
+        "Notification",
+        "Retrospective"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 877,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Multiple responses should not be returned for notifications.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 878,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following is used to uniquely identify a message?",
+      "options": [
+        "MessageHeader.id and Bundle.id",
+        "Resource.id and Patient.id",
+        "Metadata.id and Bundle.id",
+        "Bundle.id and Message.id"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 879,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What element can be used to determine the time when the message was sent?",
+      "options": [
+        "Bundle.meta.timestamp",
+        "Bundle.meta.lastUpdated",
+        "Bundle.timestamp",
+        "Bundle.MessageHeader.timestamp"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 880,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What shall the messaging service use to validate the reliability of the incoming message?",
+      "options": [
+        "Resource.id and timestamp",
+        "MessageHeader.id and Bundle.id",
+        "Metadata.id",
+        "Bundle.id and Patient.id"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 881,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Identify the type of message for the example where an EHR issues an order for an examination to be conducted for a Patient.",
+      "options": [
+        "Currency",
+        "Consequence",
+        "Notification",
+        "Retrospective"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 882,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Identify the type of message for the example where a Clinical EHR needs to know what appointment slots are available for a particular imaging procedure.",
+      "options": [
+        "Currency",
+        "Consequence",
+        "Notification",
+        "Retrospective"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 883,
+      "category": "architecture",
+      "difficulty": "easy",
+      "content": "What is the architecture that uses services to encapsulate and provide discrete pieces of application functionality to each other?",
+      "options": [
+        "SOA",
+        "REST",
+        "RESTful",
+        "SOAP"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 884,
+      "category": "data-types",
+      "difficulty": "medium",
+      "content": "Choose valid categories of data types:",
+      "options": [
+        "Simple, complex, and code systems",
+        "Metadata, complex and floating point",
+        "Primitive, complex, metadata and special",
+        "Simple, metadata and id"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 885,
+      "category": "metadata",
+      "difficulty": "medium",
+      "content": "Which of the following belongs to the metadata types?",
+      "options": [
+        "Markdown",
+        "Contact Point",
+        "Identifier",
+        "Contact Detail"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 886,
+      "category": "time-representation",
+      "difficulty": "easy",
+      "content": "The time representation 24:00 is allowed. Is the statement correct?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 887,
+      "category": "data-types",
+      "difficulty": "medium",
+      "content": "What is the maximum allowed size of string datatype?",
+      "options": [
+        "256*256 characters",
+        "512*512 characters",
+        "1024*1024 characters",
+        "2048*2048 characters"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 888,
+      "category": "FHIR-specification",
+      "difficulty": "easy",
+      "content": "Which term best describes the FHIR specification?",
+      "options": [
+        "FHIR specification is a standard specification.",
+        "FHIR specification is a product specification.",
+        "FHIR specification is a process specification.",
+        "FHIR specification is a platform specification."
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 889,
+      "category": "conformance",
+      "difficulty": "medium",
+      "content": "Which of the following statement about conformance is NOT correct? It defines.....",
+      "options": [
+        "rules about which resource elements are or are not used, and what additional elements are added that are not part of the base specification.",
+        "rules about which of FHIR'S RESTful API, messaging and document features are used, and how.",
+        "rules about which terminologies are used in particular elements.",
+        "descriptions of which resources are part of the latest version of the FHIR specification."
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 890,
+      "category": "conformance",
+      "difficulty": "medium",
+      "content": "The conformance Resource is required to have the following elements:",
+      "options": [
+        "FHIR version, format (XML, json), list of resources",
+        "url, status (active, retired), format",
+        "list of resources, FHIR version, publisher",
+        "status, contact information, list of resources"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 891,
+      "category": "conformance",
+      "difficulty": "medium",
+      "content": "Which of the following resources does NOT belong to conformance set (or module) of resources?",
+      "options": [
+        "StructureMap",
+        "MessageDefinition",
+        "CompartmentDefinition",
+        "OperationOutcome"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 892,
+      "category": "conformance",
+      "difficulty": "easy",
+      "content": "The conformance resources do not represent patient-related data; hence security standards are not applicable for this.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 893,
+      "category": "slicing",
+      "difficulty": "medium",
+      "content": "Slicing is typically used to:",
+      "options": [
+        "Repeat elements",
+        "Add multiple codes",
+        "Constrain Structure Definitions",
+        "Extend a value set"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 894,
+      "category": "search",
+      "difficulty": "medium",
+      "content": "Which resource may be used on the RESTful API to search or filter on a resource?",
+      "options": [
+        "Search Parameter",
+        "Operation",
+        "Search base",
+        "Slot"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 895,
+      "category": "implementation-guide",
+      "difficulty": "medium",
+      "content": "Which is the backbone element of the Implementation guide?",
+      "options": [
+        "Contact",
+        "License",
+        "Resource",
+        "Status"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 896,
+      "category": "FHIR-rules",
+      "difficulty": "medium",
+      "content": "Which of the following represents the set of rules about how FHIR resources are used?",
+      "options": [
+        "Capability Statement",
+        "Implementation Guide",
+        "Conformance Statement",
+        "Structure Definition"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 897,
+      "category": "terminology",
+      "difficulty": "medium",
+      "content": "Which of the following are normative resources in Terminology resource?",
+      "options": [
+        "Valueset and CodeSystem",
+        "ConceptMap and Provenance",
+        "CodeSystem and Bundle",
+        "NamingSystem and Composition"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 898,
+      "category": "terminology",
+      "difficulty": "easy",
+      "content": "A set of coded values that is allowed in an element is called a?",
+      "options": [
+        "Code Map",
+        "Value Set",
+        "Code Systems",
+        "Value Map"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 899,
+      "category": "validation",
+      "difficulty": "medium",
+      "content": "Validators typically are run against an:",
+      "options": [
+        "StructureMap",
+        "Implementation Guide",
+        "Resource",
+        "Bundle"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 900,
+      "category": "capability-statement",
+      "difficulty": "medium",
+      "content": "A capability statement covers conformance of a:",
+      "options": [
+        "domain",
+        "Country",
+        "Server",
+        "FHIR client"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 901,
+      "category": "system-conformance",
+      "difficulty": "medium",
+      "content": "When some instances of a system conform to profiles A and B, however other instances conform only to A or B, then the relationship is defined as:",
+      "options": [
+        "Identical sets",
+        "Non-overlapping",
+        "Partly overlapping",
+        "One set contained in the other"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 902,
+      "category": "value-set",
+      "difficulty": "easy",
+      "content": "Only the value set binding is extensible; not the value set itself.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 903,
+      "category": "security",
+      "difficulty": "medium",
+      "content": "What is the name of the security concept attached to a resource or bundle that provides specific metadata about the information it is fixed to?",
+      "options": [
+        "Access Control",
+        "Security Label",
+        "Authentication",
+        "Labels"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 904,
+      "category": "security",
+      "difficulty": "easy",
+      "content": "Select the recommended secure transmission method:",
+      "options": [
+        "OAuth",
+        "JWT",
+        "HTTPS (TLS)",
+        "APIKey"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 905,
+      "category": "security",
+      "difficulty": "easy",
+      "content": "Select the recommended authentication method:",
+      "options": [
+        "OAuth",
+        "JWT",
+        "HTTPS (TLS)",
+        "APIKey"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 906,
+      "category": "security",
+      "difficulty": "hard",
+      "content": "Which of the following is true; when designing a system to authorize access to information:",
+      "options": [
+        "The basic CRUD methods on resources does not require security implementation.",
+        "A security implementation must consider whether a client has the permission to access the metadata from a resource.",
+        "A security implementation is not a mandate to determine if the client has access to the included resources.",
+        "A security implementation should consider whether access to an individual resource should permit access to all resources contained within the resource."
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 907,
+      "category": "security",
+      "difficulty": "medium",
+      "content": "Which protocol can be used to support the situation where a clinician requests emergency unauthorized request to the patient's record?",
+      "options": [
+        "Core labels",
+        "Emergency Access Protocol",
+        "Break the Glass",
+        "Jurisdiction specific"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 908,
+      "category": "security-labels",
+      "difficulty": "medium",
+      "content": "Which of the below label, when received by an application, it should respond with delete all copies after immediate use for which the data was exchanged?",
+      "options": [
+        "ActCode.DELAU",
+        "ActCode.NOREUSE",
+        "ActCode.HTEST",
+        "ActCode.DELETE"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 909,
+      "category": "security-classification",
+      "difficulty": "medium",
+      "content": "Which is defined by the Healthcare Classification System (HCS) security labels?",
+      "options": [
+        "Confidentiality classification",
+        "Break the Glass",
+        "Purpose of Use",
+        "Delete After Use"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 910,
+      "category": "conformance",
+      "difficulty": "medium",
+      "content": "Which of the below is part of the conformance related safety check list?",
+      "options": [
+        "My system can render narratives properly and securely.",
+        "My system checks that the right Patient consent has been granted.",
+        "My system will display warnings returned by the server to the user.",
+        "My system checks for modifierExtension elements."
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 911,
+      "category": "clinical-applications",
+      "difficulty": "easy",
+      "content": "The clinical applications should handle the system checks for time zones and adjusts times appropriately.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 912,
+      "category": "access-control",
+      "difficulty": "medium",
+      "content": "Which model describes the access control permissions as operations on an object that a user wishes to access?",
+      "options": [
+        "Attribute based Access Model",
+        "Role based Access Model",
+        "Privilege based Access Model",
+        "Group based Access Model"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 913,
+      "category": "security-standards",
+      "difficulty": "medium",
+      "content": "Implementations should leverage existing security standards to ensure that:",
+      "options": [
+        "All communication is encrypted",
+        "No information leaks through the Resource narrative",
+        "Active script content can be injected into narrative resources",
+        "Full audit trails can be constructed and used to detect anomalous access patterns"
+      ],
+      "correctAnswers": [
+        1,
+        4
+      ],
+      "type": "multi"
+    },
+    {
+      "id": 914,
+      "category": "audit-events",
+      "difficulty": "medium",
+      "content": "When used to record security and privacy events, which event can be used by authorized applications to support alerting, filtering and forwarding?",
+      "options": [
+        "Audit Event",
+        "Provenance",
+        "Security Label",
+        "Access Control"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 915,
+      "category": "email-security",
+      "difficulty": "medium",
+      "content": "When resources are exchanged using email, what protocol should be used to protect the end-to-end communication?",
+      "options": [
+        "ABAC",
+        "TLS",
+        "RBAC",
+        "S/MIME"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 916,
+      "category": "IHE-DSG",
+      "difficulty": "medium",
+      "content": "The IHE DSG profile addresses:",
+      "options": [
+        "Authentication",
+        "Authorization",
+        "Signatures",
+        "Encryption"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 917,
+      "category": "FHIR-modules",
+      "difficulty": "easy",
+      "content": "What is the name of the module that holds the basic Patient data that can be linked to other modules?",
+      "options": [
+        "Foundation Module",
+        "Administrative Module",
+        "Clinical Content Module",
+        "Workflow Module"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 918,
+      "category": "laboratory-results",
+      "difficulty": "medium",
+      "content": "The laboratory results for a blood panels can be mapped using the following FHIR resource:",
+      "options": [
+        "Observation",
+        "Diagnostic Report",
+        "Allergy Intolerance",
+        "Condition"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 919,
+      "category": "patient-association",
+      "difficulty": "medium",
+      "content": "Which represents the association between a patient and an organization /healthcare provider(s) during which time encounters may occur?",
+      "options": [
+        "EpisodeOfCare",
+        "Encounter",
+        "Healthcare Service",
+        "Substance"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 920,
+      "category": "medication-delivery",
+      "difficulty": "medium",
+      "content": "Which resource is used to track the delivery of medication?",
+      "options": [
+        "Schedule",
+        "Slot",
+        "Timing",
+        "EpisodeOfCare"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 921,
+      "category": "time-management",
+      "difficulty": "medium",
+      "content": "Which resource represents the smallest unit of time or quantity that a resource may be booked?",
+      "options": [
+        "Schedule",
+        "Slot",
+        "Timing",
+        "EpisodeOfCare"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 922,
+      "category": "business-rules",
+      "difficulty": "medium",
+      "content": "In an example use case, wherein if all slots are busy, then the business rules will decide on the overbooking using the following resources:",
+      "options": [
+        "Trigger Definition and Slot",
+        "Schedule and Trigger Definition",
+        "Slot and Schedule",
+        "Slot and Timing"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 923,
+      "category": "observation-references",
+      "difficulty": "medium",
+      "content": "The observation resource references to the following resources:",
+      "options": [
+        "Imaging Study and Media",
+        "Specimen and Diagnostic report",
+        "Sequence and Body structure",
+        "Diagnostic report and Imaging study"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 924,
+      "category": "diagnostic-images",
+      "difficulty": "medium",
+      "content": "What Resource includes information about diagnostic images?",
+      "options": [
+        "Media",
+        "Imaging Study",
+        "DICOMStudy",
+        "DiagnosticReport"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 925,
+      "category": "imaging-reports",
+      "difficulty": "medium",
+      "content": "Which resource includes the images, imaging reports, textual and coded interpretation?",
+      "options": [
+        "Observation",
+        "MolecularSequence",
+        "Observation Report",
+        "ImagingStudy"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 926,
+      "category": "messaging-standards",
+      "difficulty": "medium",
+      "content": "The Placer and filler in HL7 V2 messaging standard is represented in FHIR as:",
+      "options": [
+        "Practitioner Type",
+        "Practitioner Role",
+        "Physician Role",
+        "Identifier Type"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 927,
+      "category": "information-objects",
+      "difficulty": "medium",
+      "content": "Which resource type describes a collection of information objects sent to a party to support their understanding or processing of another resource?",
+      "options": [
+        "Communication",
+        "Claim",
+        "Coverage",
+        "Chargeltem"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 928,
+      "category": "financial-tasks",
+      "difficulty": "medium",
+      "content": "Which of the following is not a valid financial task request?",
+      "options": [
+        "Cancel",
+        "Nullify",
+        "Poll",
+        "Patch"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 929,
+      "category": "patient-activity",
+      "difficulty": "medium",
+      "content": "Which of the following is the correct resource to represent the activity when a patient leaves the treatment setting?",
+      "options": [
+        "Claim",
+        "ClaimResponse",
+        "ExplanationOfBenefit",
+        "Task {code=status}"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 930,
+      "category": "financial-details",
+      "difficulty": "medium",
+      "content": "What resource includes the details about the payment?",
+      "options": [
+        "SuperBill",
+        "PaymentRconciliation",
+        "Claim",
+        "Claim Response"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 931,
+      "category": "protected-information",
+      "difficulty": "easy",
+      "content": "Financial Information should be considered as a protected health information.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 932,
+      "category": "security-protocol",
+      "difficulty": "easy",
+      "content": "Fast Healthcare Interoperability Resources (FHIR) is not a security protocol, nor does it define any security related functionality.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 933,
+      "category": "fhir-audience",
+      "difficulty": "medium",
+      "content": "Who are all the primary audience that are targets to make use of FHIR standard?",
+      "options": [
+        "Software developers",
+        "IT administrators",
+        "EHR users",
+        "Healthcare IT end users"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 934,
+      "category": "fhir-use",
+      "difficulty": "medium",
+      "content": "What is the basic use of FHIR standard?",
+      "options": [
+        "Mechanism to exchange data between healthcare applications electronically",
+        "Blocking exchange of data between disparate healthcare applications",
+        "Defining structure of information to be presented to front end healthcare users",
+        "Standard used to capture and store data from end users"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 935,
+      "category": "fhir-changes",
+      "difficulty": "medium",
+      "content": "Implementers can request for changes in the FHIR standard from:",
+      "options": [
+        "The FHIR Wiki page",
+        "The FHIR forum",
+        "A change link in the FHIR website",
+        "The FHIR development committee"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 936,
+      "category": "fhir-resources",
+      "difficulty": "medium",
+      "content": "What do FHIR resources aim to define?",
+      "options": [
+        "Information contents",
+        "The communication protocol to exchange data",
+        "Resource Metadata",
+        "Structure of data"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 937,
+      "category": "resource-grouping",
+      "difficulty": "medium",
+      "content": "What describes the logical grouping of resources which share a common property?",
+      "options": [
+        "Resource",
+        "Group",
+        "List",
+        "Compartment"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 938,
+      "category": "modifiers",
+      "difficulty": "medium",
+      "content": "Identify the modifiers from the following list:",
+      "options": [
+        "Person.active",
+        "Person.link",
+        "Person.address",
+        "Patient.maritalStatus"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 939,
+      "category": "severity-levels",
+      "difficulty": "medium",
+      "content": "What severity level is supported by constraints?",
+      "options": [
+        "Info",
+        "Warning",
+        "Log",
+        "Critical"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 940,
+      "category": "push-pull",
+      "difficulty": "easy",
+      "content": "The FHIR specification supports and enables both push and pull.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 941,
+      "category": "push-interactions",
+      "difficulty": "medium",
+      "content": "Which of the following interactions are applicable for push?",
+      "options": [
+        "Search",
+        "Read",
+        "Create",
+        "Delete"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 942,
+      "category": "artifacts",
+      "difficulty": "medium",
+      "content": "A coherent and bounded set of adaptations that are published as a single unit describes which artifact?",
+      "options": [
+        "Package",
+        "Implementation Guide",
+        "Conformance Resource",
+        "Profile"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 943,
+      "category": "profiles",
+      "difficulty": "medium",
+      "content": "Which profile describes best the laboratory service producing a set of different reports?",
+      "options": [
+        "Resource Profile",
+        "Operation Profile",
+        "Conformance Profile",
+        "Supported Profile"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 944,
+      "category": "license",
+      "difficulty": "easy",
+      "content": "FHIR is licensed as.",
+      "options": [
+        "Open source software",
+        "GPL",
+        "Creative Commons license",
+        "GNU GPL"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 945,
+      "category": "license-use",
+      "difficulty": "medium",
+      "content": "FHIR license permits use of:",
+      "options": [
+        "Resources with copyrights.",
+        "\"FHIR\" trademark",
+        "FHIR standard",
+        "FHIR End points"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 946,
+      "category": "slice-cardinality",
+      "difficulty": "medium",
+      "content": "Which of the following rule applies for slice cardinality?",
+      "options": [
+        "Each slice cannot have a cardinality greater than the maximum number of slices allowed.",
+        "The sum of maximum cardinalities cannot be larger than n.",
+        "The sum of minimum cardinalities must be > or = n",
+        "Each individual slice should have a minimum cardinality of 1."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 947,
+      "category": "trademarks",
+      "difficulty": "medium",
+      "content": "The frequently asked questions with respect to trademarks can be posted from:",
+      "options": [
+        "HL7 International website",
+        "ANSI standards page",
+        "FHIR trademarks Wiki pages",
+        "http://h17.org/fhir/license.html"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 948,
+      "category": "fhir-building-block",
+      "difficulty": "easy",
+      "content": "What is the basic building block in FHIR?",
+      "options": [
+        "Tags",
+        "Elements",
+        "Resource",
+        "Tables"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 949,
+      "category": "fhir-patterns",
+      "difficulty": "medium",
+      "content": "Which is the common reusable pattern of elements in FHIR resource?",
+      "options": [
+        "Elements",
+        "Tags",
+        "Format Types",
+        "Data Types"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 950,
+      "category": "fhir-resource-characteristics",
+      "difficulty": "medium",
+      "content": "Which among the following characteristics are shared by all resources? (Choose 2)",
+      "options": [
+        "Common set of data",
+        "Common set of metadata",
+        "A human readable part",
+        "Common way to define and represent resources by building them from data types that define common reusable pattern of elements"
+      ],
+      "correctAnswers": [
+        2,
+        3
+      ],
+      "type": "multi"
+    },
+    {
+      "id": 951,
+      "category": "fhir-format",
+      "difficulty": "medium",
+      "content": "How is an exchangeable content format defined in FHIR?",
+      "options": [
+        "Format",
+        "Tag",
+        "Resource",
+        "File"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 952,
+      "category": "fhir-modules",
+      "difficulty": "medium",
+      "content": "Which among the following are modules in FHIR?",
+      "options": [
+        "Financial",
+        "Workflow",
+        "Diagnostics",
+        "Imaging",
+        "Billing"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3
+      ],
+      "type": "multi"
+    },
+    {
+      "id": 953,
+      "category": "fhir-alignment",
+      "difficulty": "medium",
+      "content": "You have an HL7 RIM implementation in place. You are currently implementing FHIR. Is there a way to align previously defined patterns and best practices onto existing FHIR Project?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 954,
+      "category": "fhir-audience",
+      "difficulty": "medium",
+      "content": "Who are all the primary audience that are targets to make use of FHIR standard?",
+      "options": [
+        "Software developers",
+        "Software Architects",
+        "EHR users",
+        "Healthcare IT end users"
+      ],
+      "correctAnswers": [
+        1,
+        2
+      ],
+      "type": "multi"
+    },
+    {
+      "id": 955,
+      "category": "fhir-audience-usage",
+      "difficulty": "medium",
+      "content": "Which set of audience are the prime users of FHIR standard? Towards whom is FHIR standard targeted at?",
+      "options": [
+        "Healthcare application implementation community developers",
+        "Healthcare application implementation community support",
+        "Healthcare application implementation community DBAs",
+        "Healthcare application implementation community infrastructure admins"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 956,
+      "category": "fhir-usage",
+      "difficulty": "easy",
+      "content": "What is the basic use of FHIR standard?",
+      "options": [
+        "Mechanism to exchange data between healthcare applications electronically",
+        "Blocking exchange of data between disparate healthcare applications",
+        "Defining structure of information to be presented to front end healthcare users",
+        "Standard used to capture and store data from end users"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 957,
+      "category": "fhir-interfaces",
+      "difficulty": "medium",
+      "content": "Which among the following describes the interfaces that an implementation exposes for exchange of data?",
+      "options": [
+        "SOW statement",
+        "Project plans",
+        "Capability statement",
+        "Product roadmap"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 958,
+      "category": "fhir-resources",
+      "difficulty": "medium",
+      "content": "What does FHIR resources aim to define? Choose all that apply (Choose 2)",
+      "options": [
+        "information contents",
+        "structure for core information set used by implementations",
+        "core implementation set metadata",
+        "core implementation set data"
+      ],
+      "correctAnswers": [
+        1,
+        2
+      ],
+      "type": "multiple"
+    },
+    {
+      "id": 959,
+      "category": "fhir-philosophy",
+      "difficulty": "medium",
+      "content": "What is the basic philosophy upon which FHIR resources are built?",
+      "options": [
+        "base set of resources by themselves or when combined should satisfy common use cases",
+        "resources must be extensible",
+        "resources should be modified easily",
+        "resources should be saleable"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 960,
+      "category": "abstract-resources",
+      "difficulty": "medium",
+      "content": "Which abstract resource is never created directly: instead, one of its descendant resources is created?",
+      "options": [
+        "Resource",
+        "Domain Resource",
+        "Bundle",
+        "Binary"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 961,
+      "category": "resource-characteristics",
+      "difficulty": "medium",
+      "content": "Which of the following characteristic is shared by all resources?",
+      "options": [
+        "Metadata",
+        "Common set of data",
+        "References to other resources",
+        "Common datatype that define reusable patterns of Elements"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 962,
+      "category": "profile-conformance",
+      "difficulty": "medium",
+      "content": "When some instances of a system conform to profiles A and B, however other instances conform only to A or B, then the relationship is defined as:",
+      "options": [
+        "Identical sets",
+        "Non-overlapping",
+        "Partly overlapping",
+        "One set contained in the other"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 963,
+      "category": "clinical-scenario",
+      "difficulty": "hard",
+      "content": "A clinic needs to implement a vaccination management system including: immunization schedules, reaction monitoring, reminders, and reporting. Which combination of FHIR Resources is most appropriate?",
+      "options": [
+        "Immunization + CarePlan + Observation",
+        "Immunization + Schedule + Observation",
+        "Immunization + Observation + Schedule + Task + Communication + ImmunizationEvaluation",
+        "Immunization + CarePlan + Communication"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single",
+      "explanation": "The complete vaccination management system requires: Immunization (core vaccination data), Observation (monitoring reactions), Schedule (vaccination schedules), Task (tracking requirements), Communication (reminders), and ImmunizationEvaluation (assessment of vaccination status)"
+    },
+    {
+      "id": 964,
+      "category": "integration",
+      "difficulty": "hard",
+      "content": "A hospital needs to integrate data from multiple EHR systems, each with its own data format and coding system. What is the most suitable approach for data standardization?",
+      "options": [
+        "Use ConceptMap for mapping codes and force conversion to SNOMED CT",
+        "Keep original codes and add extensions for each system",
+        "Use CodeableConcept with multiple codings to store both original and standard codes, combined with ConceptMap for mapping",
+        "Only store LOINC codes and discard original system codes"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single",
+      "explanation": "Using CodeableConcept with multiple codings allows preservation of original codes while adding standardized codes. ConceptMap provides formal mapping between different code systems."
+    },
+    {
+      "id": 965,
+      "category": "security",
+      "difficulty": "hard",
+      "content": "A multi-specialty clinic is implementing a data sharing system with multiple partners. Requirements include: detailed access control, access tracking, patient consent management, and data integrity. Select the most appropriate resource combination (Select all that apply)",
+      "options": [
+        "Consent resource for managing patient permissions",
+        "AuditEvent for logging all access",
+        "Provenance for tracking data origin and changes",
+        "SecurityLabels in meta.security for marking sensitivity levels"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "A complete security implementation requires Consent (permissions), AuditEvent (logging), Provenance (tracking), and SecurityLabels (sensitivity marking)"
+    },
+    {
+      "id": 966,
+      "category": "workflow",
+      "difficulty": "medium",
+      "content": "An emergency department needs to implement a patient management system, including: priority triage, status tracking, staff assignment, and bed management. Which sequence of resources is most appropriate?",
+      "options": [
+        "Patient -> Location -> Task",
+        "Encounter -> Location -> Flag -> Task -> Schedule -> Communication",
+        "Patient -> Encounter -> ServiceRequest",
+        "Encounter -> Condition -> Procedure"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single",
+      "explanation": "The complete workflow requires Encounter (visit), Location (bed), Flag (priority), Task (assignments), Schedule (staff), and Communication (notifications)"
+    },
+    {
+      "id": 967,
+      "category": "technical",
+      "difficulty": "hard",
+      "content": "Given this scenario: A system needs to perform a batch transaction to update multiple resources simultaneously. During execution, some operations fail. Which handling approach is most appropriate?",
+      "options": [
+        "Rollback entire transaction and return OperationOutcome with error details",
+        "Accept successful operations and ignore failed ones",
+        "Automatically retry failed operations",
+        "Save intermediate state and allow transaction resume"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "FHIR transactions should be atomic - either all operations succeed or none do. Rollback with error details maintains data integrity."
+    },
+    {
+      "id": 968,
+      "category": "implementation",
+      "difficulty": "hard",
+      "content": "A laboratory system receives results with custom codes. Given JSON:\n{\n  'resourceType': 'Observation',\n  'code': {\n    'coding': [{\n      'system': 'http://lab.local/codes',\n      'code': 'GLU',\n      'display': 'Glucose'\n    }]\n  }\n}\nWhat is the best approach for standardization?",
+      "options": [
+        "Add LOINC coding while preserving original code in CodeableConcept",
+        "Replace with LOINC code only",
+        "Create extension for mapping",
+        "Use text field only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Preserving original codes while adding standard codes maintains backward compatibility and supports integration"
+    },
+    {
+      "id": 969,
+      "category": "clinical-workflow",
+      "difficulty": "hard",
+      "content": "A hospital implements a referral workflow system with requirements for tracking status, appointments, and documentation. Given a ServiceRequest for referral, which additional resources are needed for complete implementation?",
+      "options": [
+        "Task + Appointment + Encounter + DocumentReference",
+        "Appointment only",
+        "Task + Encounter",
+        "DocumentReference only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "A complete referral workflow needs Task (tracking), Appointment (scheduling), Encounter (visit), and DocumentReference (documentation)"
+    },
+    {
+      "id": 970,
+      "category": "integration",
+      "difficulty": "hard",
+      "content": "When implementing a SMART on FHIR application that needs to access patient data across multiple encounters, which scope is most appropriate?",
+      "options": [
+        "patient/*.read",
+        "user/*.read",
+        "patient/Encounter.read",
+        "user/Patient.read"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "patient/*.read scope provides read access to all resource types for the current patient context"
+    },
+    {
+      "id": 971,
+      "category": "clinical-workflow",
+      "difficulty": "hard",
+      "content": "A hospital's radiology department needs to implement a system for managing contrast media administration during imaging procedures. The system must track: contrast type, dosage, adverse reactions, and relation to imaging studies. Which resource combination best models this workflow?",
+      "options": [
+        "Procedure + MedicationAdministration + ImagingStudy + Observation",
+        "ImagingStudy + Observation only",
+        "MedicationAdministration + ImagingStudy",
+        "Procedure + ImagingStudy only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "This requires Procedure (imaging procedure), MedicationAdministration (contrast media), ImagingStudy (imaging data), and Observation (reactions)"
+    },
+    {
+      "id": 972,
+      "category": "interoperability",
+      "difficulty": "hard",
+      "content": "Given this CDA to FHIR conversion scenario:\n{\n  'resourceType': 'Bundle',\n  'type': 'document',\n  'entry': [{\n    'resource': {\n      'resourceType': 'Composition',\n      'section': [{\n        'code': {\n          'coding': [{\n            'system': 'http://loinc.org',\n            'code': '11450-4'\n          }]\n        }\n      }]\n    }\n  }]\n}\nWhat is the correct approach for maintaining document integrity?",
+      "options": [
+        "Use Provenance resource with digital signatures and Binary resource for original CDA",
+        "Store original CDA as an attachment",
+        "Create new document without original reference",
+        "Use extension elements only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Maintaining document integrity requires both Provenance (tracking) and the original document (Binary resource)"
+    },
+    {
+      "id": 973,
+      "category": "patient-safety",
+      "difficulty": "medium",
+      "content": "A hospital needs to implement real-time sepsis alerts based on vital signs and lab results. Select all appropriate resources needed:",
+      "options": [
+        "Observation for vital signs and lab results",
+        "Flag for active sepsis alerts",
+        "RiskAssessment for sepsis probability scoring",
+        "Communication for notifying care team"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "Complete sepsis alerting requires monitoring (Observation), alerting (Flag), risk assessment (RiskAssessment), and notification (Communication)"
+    },
+    {
+      "id": 974,
+      "category": "medication-management",
+      "difficulty": "hard",
+      "content": "A pharmacy system needs to implement medication substitution workflow when prescribed medications are out of stock. Given this MedicationRequest:\n{\n  'resourceType': 'MedicationRequest',\n  'status': 'active',\n  'intent': 'order',\n  'medicationCodeableConcept': {\n    'coding': [{\n      'system': 'http://www.nlm.nih.gov/research/umls/rxnorm',\n      'code': '1234'\n    }]\n  }\n}\nWhich additional resources are needed?",
+      "options": [
+        "Task + DetectedIssue + MedicationRequest + Communication",
+        "MedicationRequest only",
+        "Task + Communication",
+        "DetectedIssue only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Complete substitution workflow needs Task (tracking), DetectedIssue (stock issue), new MedicationRequest (substitute), and Communication (notifications)"
+    },
+    {
+      "id": 975,
+      "category": "care-coordination",
+      "difficulty": "hard",
+      "content": "A care coordination team needs to implement a system for managing complex care plans with multiple interventions, goals, and team members. Given:\n{\n  'resourceType': 'CarePlan',\n  'status': 'active',\n  'intent': 'plan'\n}\nWhich combination of resources provides the most comprehensive solution?",
+      "options": [
+        "CarePlan + Goal + Task + CareTeam + Appointment + Communication",
+        "CarePlan + Goal only",
+        "CarePlan + CareTeam + Task",
+        "Goal + Task + Communication"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Comprehensive care coordination requires CarePlan (master plan), Goal (objectives), Task (activities), CareTeam (team members), Appointment (scheduling), and Communication (team coordination)"
+    },
+    {
+      "id": 976,
+      "category": "device-integration",
+      "difficulty": "hard",
+      "content": "A hospital is implementing smart infusion pumps integration. The system needs to track: device status, medication delivery rates, alerts, and patient associations. Given a Device resource for the pump, what additional resources are needed for complete integration?",
+      "options": [
+        "DeviceMetric + Observation + MedicationAdministration + Alert",
+        "DeviceMetric + Observation only",
+        "Device + MedicationAdministration",
+        "Observation + Alert"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Complete pump integration requires DeviceMetric (pump metrics), Observation (measurements), MedicationAdministration (delivery tracking), and Alert (pump warnings)"
+    },
+    {
+      "id": 977,
+      "category": "scheduling",
+      "difficulty": "medium",
+      "content": "A clinic needs to implement a complex scheduling system that handles: recurring appointments, resource availability, overbooking rules, and patient preferences. Given this Schedule JSON:\n{\n  'resourceType': 'Schedule',\n  'actor': [{\n    'reference': 'Practitioner/1'\n  }],\n  'planningHorizon': {\n    'start': '2024-01-01',\n    'end': '2024-12-31'\n  }\n}\nWhich additional resources are required?",
+      "options": [
+        "Slot + Appointment + AppointmentResponse + HealthcareService",
+        "Appointment only",
+        "Slot + Appointment",
+        "Schedule + Slot"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Complex scheduling requires Schedule (availability), Slot (time slots), Appointment (bookings), AppointmentResponse (confirmations), and HealthcareService (service details)"
+    },
+    {
+      "id": 978,
+      "category": "population-health",
+      "difficulty": "hard",
+      "content": "A public health department needs to track vaccination coverage and adverse events across populations. Select all appropriate resources needed:",
+      "options": [
+        "Group resource for population definition",
+        "Measure resource for coverage metrics",
+        "MeasureReport for population-level reporting",
+        "AdverseEvent for tracking reactions"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "Population health tracking needs Group (populations), Measure (metrics definition), MeasureReport (results), and AdverseEvent (reaction tracking)"
+    },
+    {
+      "id": 979,
+      "category": "clinical-decision-support",
+      "difficulty": "hard",
+      "content": "Implementing a clinical decision support system for drug-drug interactions. Given:\n{\n  'resourceType': 'MedicationRequest',\n  'status': 'draft',\n  'intent': 'order'\n}\nWhich resources are needed to implement complete interaction checking?",
+      "options": [
+        "DetectedIssue + RiskAssessment + ClinicalImpression + Task",
+        "DetectedIssue only",
+        "RiskAssessment + Task",
+        "ClinicalImpression only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Complete interaction checking needs DetectedIssue (interactions), RiskAssessment (risk level), ClinicalImpression (clinical context), and Task (follow-up actions)"
+    },
+    {
+      "id": 980,
+      "category": "terminology-binding",
+      "difficulty": "medium",
+      "content": "A system receives lab results using local codes and needs to map them to LOINC. Given this Observation:\n{\n  'resourceType': 'Observation',\n  'code': {\n    'coding': [{\n      'system': 'local',\n      'code': 'CBC'\n    }]\n  }\n}\nWhat is the best approach for terminology mapping?",
+      "options": [
+        "Use ConceptMap resource with equivalence mappings",
+        "Replace local codes directly",
+        "Add custom extensions",
+        "Use text field only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "ConceptMap provides formal mapping between code systems while maintaining traceability"
+    },
+    {
+      "id": 981,
+      "category": "versioning",
+      "difficulty": "hard",
+      "content": "A system needs to maintain version history for clinical documents. Given a DocumentReference:\n{\n  'resourceType': 'DocumentReference',\n  'status': 'current',\n  'docStatus': 'final'\n}\nHow should versioning be implemented?",
+      "options": [
+        "Use meta.versionId + DocumentReference.relatesTo + Provenance",
+        "Create new DocumentReference for each version",
+        "Use extension elements",
+        "Update existing DocumentReference"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Proper versioning requires meta.versionId (version tracking), relatesTo (relationship between versions), and Provenance (audit trail)"
+    },
+    {
+      "id": 982,
+      "category": "data-validation",
+      "difficulty": "medium",
+      "content": "When implementing resource validation for a specific implementation guide, which approach ensures the most comprehensive validation?",
+      "options": [
+        "Validate against StructureDefinition, terminologies, and invariants",
+        "Check resource structure only",
+        "Validate terminology bindings only",
+        "Use schema validation only"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Comprehensive validation must check structure (StructureDefinition), terminology bindings, and business rules (invariants)"
+    },
+    {
+      "id": 983,
+      "category": "subscription",
+      "difficulty": "hard",
+      "content": "A system needs to implement real-time notifications for critical lab results. Given this Subscription resource:\n{\n  'resourceType': 'Subscription',\n  'status': 'active',\n  'criteria': 'Observation?code=http://loinc.org|1234&value-quantity=gt100'\n}\nWhat additional components are needed for a robust implementation?",
+      "options": [
+        "Channel + SubscriptionTopic + BackportSubscription + Communication",
+        "Channel configuration only",
+        "SubscriptionTopic only",
+        "Basic notification setup"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Robust subscription system needs Channel (delivery method), SubscriptionTopic (event definition), BackportSubscription (compatibility), and Communication (notification delivery)"
+    },
+    {
+      "id": 984,
+      "category": "data-conversion",
+      "difficulty": "hard",
+      "content": "When converting HL7 v2 ADT messages to FHIR, handling patient merges requires special consideration. Given an incoming merge message, which FHIR approach is most appropriate?",
+      "options": [
+        "Create Patient.link with 'replaced-by' type and update all references",
+        "Delete duplicate patient record",
+        "Create new patient with combined data",
+        "Add extension for merged records"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Patient merges should use Patient.link to maintain relationship between records while updating references"
+    },
+    {
+      "id": 985,
+      "category": "conformance",
+      "difficulty": "medium",
+      "content": "When implementing a FHIR server, the CapabilityStatement should include which components? (Select all that apply)",
+      "options": [
+        "Supported resources and operations",
+        "Search parameters and includes",
+        "Security mechanisms",
+        "Implementation guide conformance"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "Complete CapabilityStatement requires resources, operations, search capabilities, security, and conformance claims"
+    },
+    {
+      "id": 986,
+      "category": "bulk-data",
+      "difficulty": "hard",
+      "content": "Implementing bulk data export functionality requires handling large datasets. Which approach best ensures reliable data transfer?",
+      "options": [
+        "Use async operation with _export operation and status tracking",
+        "Export all data synchronously",
+        "Multiple small synchronous requests",
+        "Direct database export"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Bulk data export should use async operations with status tracking to handle large datasets reliably"
+    },
+    {
+      "id": 987,
+      "category": "security-labels",
+      "difficulty": "medium",
+      "content": "A mental health system needs to implement data privacy controls. Given a Observation resource containing sensitive data, how should access controls be implemented?",
+      "options": [
+        "Use meta.security with appropriate security labels and Consent resources",
+        "Add custom extensions",
+        "Implement at application level only",
+        "Use resource-level restrictions"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Privacy controls should use meta.security labels combined with Consent resources for fine-grained control"
+    },
+    {
+      "id": 988,
+      "category": "search",
+      "difficulty": "hard",
+      "content": "Implementing a complex search for medications requires combining multiple parameters. Given this search requirement:\n'Find all active medications for a patient with a specific ingredient, prescribed in last 30 days'\nWhich search parameter combination is correct?",
+      "options": [
+        "MedicationRequest?patient=[id]&status=active&authoredon=gt[date]&ingredient-code=[code]",
+        "MedicationRequest?patient=[id]&status=active",
+        "MedicationRequest?ingredient-code=[code]",
+        "MedicationRequest?patient=[id]&date=[date]"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Complex medication search requires combining patient reference, status, date, and medication characteristics"
+    },
+    {
+      "id": 989,
+      "category": "profiling",
+      "difficulty": "hard",
+      "content": "When creating profiles for international use, which aspects need consideration? (Select all that apply)",
+      "options": [
+        "Multiple language support in display elements",
+        "Regional terminology bindings",
+        "Local identifier systems",
+        "Currency and unit variations"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "International profiles must handle languages, terminologies, identifiers, and regional variations"
+    },
+    {
+      "id": 990,
+      "category": "performance",
+      "difficulty": "hard",
+      "content": "A system handling high-volume patient data needs to optimize search performance. Given this search pattern:\n{\n  'resourceType': 'Patient',\n  'identifier': [{\n    'system': 'http://hospital.org',\n    'value': '*'\n  }]\n}\nWhich optimization approach is most effective?",
+      "options": [
+        "Implement _include with _revinclude caching and SearchParameter indices",
+        "Add more server capacity",
+        "Increase database connections",
+        "Use simple string matching"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Optimal search performance requires proper indexing of SearchParameters and caching of included resources"
+    },
+    {
+      "id": 991,
+      "category": "error-handling",
+      "difficulty": "medium",
+      "content": "When implementing a FHIR server, what is the correct way to handle validation errors during resource creation?",
+      "options": [
+        "Return 422 with OperationOutcome detailing specific validation failures",
+        "Return 400 with generic error",
+        "Return 500 with error details",
+        "Accept resource and log errors"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Proper error handling should use 422 status code with detailed OperationOutcome explaining validation failures"
+    },
+    {
+      "id": 992,
+      "category": "batch-processing",
+      "difficulty": "hard",
+      "content": "A system needs to process batch updates for multiple patients. Given a Bundle resource:\n{\n  'resourceType': 'Bundle',\n  'type': 'batch',\n  'entry': [/*multiple updates*/]\n}\nHow should concurrent updates be handled?",
+      "options": [
+        "Implement optimistic locking with version checking and atomic updates",
+        "Process updates sequentially",
+        "Skip version checking",
+        "Use first-come-first-served"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Batch processing should use optimistic locking to handle concurrent updates safely"
+    },
+    {
+      "id": 993,
+      "category": "custom-operations",
+      "difficulty": "hard",
+      "content": "When implementing a custom operation for complex clinical calculations, which approach is most appropriate?",
+      "options": [
+        "Define OperationDefinition with clear parameters and use $operation syntax",
+        "Use custom endpoints",
+        "Extend existing resources",
+        "Use search parameters"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Custom operations should be properly defined using OperationDefinition and follow FHIR operation syntax"
+    },
+    {
+      "id": 994,
+      "category": "versioning",
+      "difficulty": "medium",
+      "content": "When implementing version control for FHIR resources, which aspects must be handled? (Select all that apply)",
+      "options": [
+        "Version numbering in meta.versionId",
+        "Last updated timestamp tracking",
+        "Version history accessibility",
+        "Change type documentation"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "Complete version control requires version numbers, timestamps, history access, and change tracking"
+    },
+    {
+      "id": 995,
+      "category": "conditional-updates",
+      "difficulty": "hard",
+      "content": "When implementing conditional updates, how should the server handle multiple matches?",
+      "options": [
+        "Return 412 Precondition Failed with OperationOutcome",
+        "Update all matching resources",
+        "Update the first match only",
+        "Create a new resource"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Multiple matches in conditional updates should return 412 with explanation to prevent unintended updates"
+    },
+    {
+      "id": 996,
+      "category": "terminology",
+      "difficulty": "hard",
+      "content": "A system needs to validate terminology usage across multiple code systems. What's the most robust approach?",
+      "options": [
+        "Implement terminology server with CodeSystem, ValueSet, and ConceptMap resources",
+        "Use internal code validation",
+        "Validate against single terminology",
+        "Skip terminology validation"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Robust terminology validation requires proper terminology server implementation with all necessary terminology resources"
+    },
+    {
+      "id": 997,
+      "category": "restful-operations",
+      "difficulty": "hard",
+      "content": "Given a situation where a FHIR server needs to handle conditional references during a transaction bundle processing. Consider this bundle:\n{\n  'resourceType': 'Bundle',\n  'type': 'transaction',\n  'entry': [{\n    'fullUrl': 'urn:uuid:1',\n    'resource': {\n      'resourceType': 'Patient',\n      'identifier': [{\n        'system': 'http://example.org',\n        'value': 'pat1'\n      }]\n    },\n    'request': {\n      'method': 'PUT',\n      'url': 'Patient?identifier=http://example.org|pat1'\n    }\n  }]\n}\nWhat is the correct processing approach?",
+      "options": [
+        "Process conditional references first, then handle internal references using the assigned IDs",
+        "Process all references simultaneously",
+        "Create new resources for all references",
+        "Skip conditional reference processing"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Conditional references in transactions must be processed first to ensure proper ID resolution for internal references"
+    },
+    {
+      "id": 998,
+      "category": "search-implementation",
+      "difficulty": "hard",
+      "content": "When implementing _include and _revinclude search parameters, what aspects need consideration? (Select all that apply)",
+      "options": [
+        "Circular reference prevention",
+        "Resource iteration depth control",
+        "Memory usage optimization",
+        "Reference integrity validation"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "Include/revinclude implementation must handle circular references, control depth, optimize memory, and validate references"
+    },
+    {
+      "id": 999,
+      "category": "validation",
+      "difficulty": "medium",
+      "content": "When implementing custom validation for a FHIR profile, which validation types should be included? (Select all that apply)",
+      "options": [
+        "Structure validation against StructureDefinition",
+        "Business rule validation using FHIRPath",
+        "Terminology binding validation",
+        "Reference integrity checks"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "Complete validation must check structure, business rules, terminology, and references"
+    },
+    {
+      "id": 1000,
+      "category": "security",
+      "difficulty": "hard",
+      "content": "A healthcare system needs to implement data segmentation for privacy. Given a Patient resource with sensitive information, how should access control be implemented?",
+      "options": [
+        "Implement security labels, Consent resources, and proper scoping of data access",
+        "Use basic authentication only",
+        "Implement role-based access control only",
+        "Use resource-level restrictions"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Data segmentation requires security labels, consent management, and proper access control mechanisms"
+    },
+    {
+      "id": 1001,
+      "category": "conformance",
+      "difficulty": "hard",
+      "content": "When implementing support for multiple FHIR versions, what is the correct approach for handling version-specific differences?",
+      "options": [
+        "Use CapabilityStatement with version-specific endpoints and conversion logic",
+        "Support only the latest version",
+        "Create separate servers for each version",
+        "Ignore version differences"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Multi-version support requires proper CapabilityStatement documentation and version conversion handling"
+    },
+    {
+      "id": 1002,
+      "category": "operations",
+      "difficulty": "medium",
+      "content": "When implementing a custom operation that processes patient data, what elements should the OperationDefinition include? (Select all that apply)",
+      "options": [
+        "Input and output parameter definitions",
+        "System/resource level specification",
+        "Affect on search indexing",
+        "Implementation notes"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "type": "multi",
+      "explanation": "OperationDefinition should fully specify parameters, level, indexing effects, and implementation details"
+    },
+    {
+      "id": 1003,
+      "category": "integration",
+      "difficulty": "hard",
+      "content": "A system needs to integrate with an external terminology server. What approach provides the most robust implementation?",
+      "options": [
+        "Implement $validate-code, $expand, and $translate operations with caching",
+        "Store all codes locally",
+        "Use text descriptions only",
+        "Validate codes manually"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Robust terminology integration requires standard terminology operations with proper caching"
     }
-    
   ]
 }
