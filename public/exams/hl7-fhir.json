@@ -586,13 +586,13 @@
       "difficulty": "medium",
       "content": "What is the purpose of the 'searchParam' section in a CapabilityStatement?",
       "options": [
-        "To list supported search parameters for resources",
         "To configure the database indexing options",
+        "To list supported search parameters for resources",
         "To define how resources are paginated",
         "To specify resource-specific security settings"
       ],
       "correctAnswers": [
-        1
+        2
       ],
       "type": "single"
     },
@@ -754,13 +754,13 @@
       "difficulty": "medium",
       "content": "Which of the following is a valid use of a CapabilityStatement in FHIR?",
       "options": [
-        "Document server capabilities for resource interactions",
         "Replace the server's authentication mechanism",
         "Store patient resource instances",
+        "Document server capabilities for resource interactions",
         "Define extensions for use cases"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "type": "single"
     },
@@ -870,13 +870,13 @@
       "difficulty": "medium",
       "content": "Which FHIR element allows you to define relationships between resources?",
       "options": [
-        "Reference",
         "Extension",
+        "Reference",
         "Identifier",
         "Bundle"
       ],
       "correctAnswers": [
-        1
+        2
       ],
       "type": "single"
     },
@@ -920,13 +920,13 @@
       "difficulty": "medium",
       "content": "What is the difference between a 'batch' and a 'transaction' Bundle in FHIR?",
       "options": [
-        "A batch processes requests independently, while a transaction processes them as a single unit",
         "A batch is limited to search requests, while a transaction is not",
+        "A batch processes requests independently, while a transaction processes them as a single unit",
         "A transaction only supports read and update operations, while a batch supports all operations",
         "A batch is faster than a transaction"
       ],
       "correctAnswers": [
-        1
+        2
       ],
       "type": "single"
     },
@@ -1038,13 +1038,13 @@
       "difficulty": "medium",
       "content": "What does the 'Prefer: return=minimal' header achieve in a FHIR request?",
       "options": [
-        "Requests only the ID of the created resource",
         "Requests the complete resource details",
         "Suppresses all headers in the response",
-        "Returns only the OperationOutcome resource"
+        "Returns only the OperationOutcome resource",
+        "Requests only the ID of the created resource"
       ],
       "correctAnswers": [
-        1
+        4
       ],
       "type": "single"
     },
@@ -3938,13 +3938,13 @@
       "difficulty": "medium",
       "content": "Which resource is commonly used in an Implementation Guide to demonstrate how to use a Profile?",
       "options": [
-        "Example",
         "StructureDefinition",
         "OperationOutcome",
-        "CodeSystem"
+        "CodeSystem",
+        "Example"
       ],
       "correctAnswers": [
-        1
+        4
       ],
       "type": "single"
     },
@@ -6024,13 +6024,13 @@
       "difficulty": "medium",
       "content": "What is the role of the 'location' field in an OperationOutcome issue?",
       "options": [
-        "To specify the path of the error in the resource",
         "To indicate the server's physical location",
         "To log the resource's metadata",
-        "To store diagnostic details of the issue"
+        "To store diagnostic details of the issue",
+        "To specify the path of the error in the resource"
       ],
       "correctAnswers": [
-        1
+        4
       ],
       "type": "single"
     },
@@ -6982,13 +6982,13 @@
       "difficulty": "medium",
       "content": "What does the 'operation' field in a CapabilityStatement describe?",
       "options": [
-        "The operations supported by the server",
         "The list of resources available on the server",
+        "The operations supported by the server",
         "The security mechanisms implemented",
         "The profiles conformed to by the server"
       ],
       "correctAnswers": [
-        1
+        2
       ],
       "type": "single"
     },
@@ -6998,13 +6998,13 @@
       "difficulty": "medium",
       "content": "What is the primary purpose of an OperationOutcome resource in FHIR?",
       "options": [
-        "To provide detailed information about the success or failure of an operation",
         "To store the history of a resource",
         "To validate resources against schemas",
+        "To provide detailed information about the success or failure of an operation",
         "To log server interactions"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "type": "single"
     },
@@ -7062,13 +7062,13 @@
       "difficulty": "medium",
       "content": "What is the purpose of defining Profiles in a FHIR Implementation Guide?",
       "options": [
-        "To constrain or extend resources for specific use cases",
         "To validate relationships between resources",
         "To log server interactions",
-        "To map terminologies between systems"
+        "To map terminologies between systems",
+        "To constrain or extend resources for specific use cases"
       ],
       "correctAnswers": [
-        1
+        4
       ],
       "type": "single"
     },
@@ -7546,13 +7546,13 @@
       "difficulty": "medium",
       "content": "What is the role of Examples in a FHIR Implementation Guide?",
       "options": [
-        "To demonstrate proper use of profiles and extensions",
         "To enforce constraints on resources",
         "To validate terminology mappings",
+        "To demonstrate proper use of profiles and extensions",
         "To log server interactions"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "type": "single"
     },
@@ -7717,23 +7717,6 @@
         1
       ],
       "type": "single"
-    },
-    {
-      "id": 480,
-      "category": "FHIR Basics",
-      "difficulty": "medium",
-      "content": "What are the official data formats supported by FHIR? (Select all that apply)",
-      "options": [
-        "JSON",
-        "XML",
-        "YAML",
-        "CSV"
-      ],
-      "correctAnswers": [
-        1,
-        2
-      ],
-      "type": "multi"
     },
     {
       "id": 481,
@@ -8785,22 +8768,6 @@
       "type": "single"
     },
     {
-      "id": 546,
-      "category": "Terminology",
-      "difficulty": "medium",
-      "content": "What is the function of the 'ConceptMap' resource?",
-      "options": [
-        "To map codes between different terminologies",
-        "To define criteria for ValueSet expansion",
-        "To log terminology usage",
-        "To validate resources"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "type": "single"
-    },
-    {
       "id": 547,
       "category": "Search Parameters",
       "difficulty": "medium",
@@ -8947,22 +8914,6 @@
       "type": "single"
     },
     {
-      "id": 556,
-      "category": "Terminology",
-      "difficulty": "medium",
-      "content": "What is the function of the 'ConceptMap' resource?",
-      "options": [
-        "To map codes between different terminologies",
-        "To define criteria for ValueSet expansion",
-        "To log terminology usage",
-        "To validate resources"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "type": "single"
-    },
-    {
       "id": 557,
       "category": "Search Parameters",
       "difficulty": "medium",
@@ -9102,22 +9053,6 @@
         "The HTTP status code of the operation",
         "The location of the issue in the resource",
         "The severity of the issue"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "type": "single"
-    },
-    {
-      "id": 566,
-      "category": "Terminology",
-      "difficulty": "medium",
-      "content": "What is the function of the 'ConceptMap' resource?",
-      "options": [
-        "To map codes between different terminologies",
-        "To define criteria for ValueSet expansion",
-        "To log terminology usage",
-        "To validate resources"
       ],
       "correctAnswers": [
         1
@@ -9561,22 +9496,6 @@
       "type": "single"
     },
     {
-      "id": 594,
-      "category": "Implementation Guides",
-      "difficulty": "medium",
-      "content": "What is the purpose of defining Profiles in a FHIR Implementation Guide?",
-      "options": [
-        "To constrain or extend FHIR resources for specific use cases",
-        "To validate terminology mappings",
-        "To log resource interactions",
-        "To map resource schemas"
-      ],
-      "correctAnswers": [
-        1
-      ],
-      "type": "single"
-    },
-    {
       "id": 595,
       "category": "FHIR Basics",
       "difficulty": "medium",
@@ -9824,13 +9743,13 @@
       "difficulty": "medium",
       "content": "What is the primary purpose of an OperationOutcome resource?",
       "options": [
-        "To provide detailed feedback on the success or failure of an operation",
         "To store metadata for a resource",
         "To define relationships between resources",
+        "To provide detailed feedback on the success or failure of an operation",
         "To validate a resource against schemas"
       ],
       "correctAnswers": [
-        1
+        3
       ],
       "type": "single"
     },
@@ -9970,13 +9889,13 @@
       "difficulty": "medium",
       "content": "What does the 'operation' field in a CapabilityStatement describe?",
       "options": [
-        "The custom operations supported by the server",
         "The list of available resources",
         "The security mechanisms implemented",
-        "The formats supported by the server"
+        "The formats supported by the server",
+        "The custom operations supported by the server"
       ],
       "correctAnswers": [
-        1
+        4
       ],
       "type": "single"
     },
@@ -10050,13 +9969,13 @@
       "difficulty": "medium",
       "content": "What is the purpose of defining Profiles in a FHIR Implementation Guide?",
       "options": [
-        "To constrain and extend FHIR resources for specific use cases",
         "To validate relationships between resources",
+        "To constrain and extend FHIR resources for specific use cases",
         "To log interactions with the server",
         "To map terminologies between systems"
       ],
       "correctAnswers": [
-        1
+        2
       ],
       "type": "single"
     },
@@ -10223,23 +10142,6 @@
       "type": "single"
     },
     {
-      "id": 635,
-      "category": "FHIR Basics",
-      "difficulty": "medium",
-      "content": "What are the official data formats supported by FHIR? (Select all that apply)",
-      "options": [
-        "JSON",
-        "XML",
-        "YAML",
-        "CSV"
-      ],
-      "correctAnswers": [
-        1,
-        2
-      ],
-      "type": "multi"
-    },
-    {
       "id": 636,
       "category": "FHIR Basics",
       "difficulty": "medium",
@@ -10382,23 +10284,6 @@
         1
       ],
       "type": "single"
-    },
-    {
-      "id": 645,
-      "category": "FHIR Basics",
-      "difficulty": "medium",
-      "content": "What are the supported formats for FHIR data exchange? (Select all that apply)",
-      "options": [
-        "JSON",
-        "XML",
-        "YAML",
-        "CSV"
-      ],
-      "correctAnswers": [
-        1,
-        2
-      ],
-      "type": "multi"
     },
     {
       "id": 646,
@@ -10563,7 +10448,7 @@
       "type": "multi"
     },
     {
-      "id": 1,
+      "id": 656,
       "category": "Scenario",
       "difficulty": "medium",
       "content": "A hospital needs to track patient transfers between departments. Which FHIR resources should be used?",
@@ -10579,7 +10464,7 @@
       "type": "single"
     },
     {
-      "id": 2,
+      "id": 657,
       "category": "JSON Parsing",
       "difficulty": "medium",
       "content": "Given the JSON snippet:\n{\n  'resourceType': 'Patient',\n  'name': [{\n    'use': 'official',\n    'family': 'Smith',\n    'given': ['John', 'William']\n  }]\n}\nWhat is the correct way to reference the patient's first given name?",
@@ -10595,7 +10480,7 @@
       "type": "single"
     },
     {
-      "id": 3,
+      "id": 658,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A clinic needs to implement a prescription workflow where medications must be approved by a pharmacist before dispensing. Which approach is most appropriate?",
@@ -10611,7 +10496,7 @@
       "type": "single"
     },
     {
-      "id": 4,
+      "id": 659,
       "category": "XML Parsing",
       "difficulty": "hard",
       "content": "Given the XML:\n<Observation>\n  <code>\n    <coding>\n      <system value='http://loinc.org'/>\n      <code value='8480-6'/>\n    </coding>\n  </code>\n  <valueQuantity>\n    <value value='120'/>\n    <unit value='mmHg'/>\n  </valueQuantity>\n</Observation>\nWhich FHIRPath expression returns the unit value?",
@@ -10627,7 +10512,7 @@
       "type": "single"
     },
     {
-      "id": 5,
+      "id": 660,
       "category": "Scenario",
       "difficulty": "medium",
       "content": "A healthcare system needs to implement real-time alerts for critical lab results. What is the best implementation approach?",
@@ -10643,7 +10528,7 @@
       "type": "single"
     },
     {
-      "id": 6,
+      "id": 661,
       "category": "JSON Parsing",
       "difficulty": "hard",
       "content": "Given:\n{\n  'resourceType': 'Bundle',\n  'type': 'searchset',\n  'entry': [{\n    'resource': {\n      'resourceType': 'Patient',\n      'id': '123',\n      'active': true\n    }\n  }]\n}\nWhat is the correct JSON path to check if the patient is active?",
@@ -10659,7 +10544,7 @@
       "type": "single"
     },
     {
-      "id": 7,
+      "id": 662,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A system needs to maintain an audit trail of all changes to patient demographics. What is the most appropriate implementation?",
@@ -10675,7 +10560,7 @@
       "type": "single"
     },
     {
-      "id": 8,
+      "id": 663,
       "category": "XML Parsing",
       "difficulty": "medium",
       "content": "In a FHIR XML document, what is the correct way to represent a null value?",
@@ -10692,7 +10577,7 @@
       "type": "multi"
     },
     {
-      "id": 9,
+      "id": 664,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A hospital needs to implement a system for tracking patient consent for different procedures and data sharing. Which approach is most appropriate?",
@@ -10708,7 +10593,7 @@
       "type": "single"
     },
     {
-      "id": 10,
+      "id": 665,
       "category": "JSON Parsing",
       "difficulty": "hard",
       "content": "Given a Bundle containing multiple Observation resources, what is the correct FHIR search parameter to find all observations for a specific patient?",
@@ -10724,7 +10609,7 @@
       "type": "single"
     },
     {
-      "id": 656,
+      "id": 666,
       "category": "FHIR Basics",
       "difficulty": "medium",
       "content": "What is the purpose of the 'id' field in a FHIR resource?",
@@ -10740,7 +10625,7 @@
       "type": "single"
     },
     {
-      "id": 657,
+      "id": 667,
       "category": "RESTful APIs",
       "difficulty": "medium",
       "content": "What does the '_include' parameter do in a FHIR search query?",
@@ -10756,7 +10641,7 @@
       "type": "single"
     },
     {
-      "id": 658,
+      "id": 668,
       "category": "Bundles",
       "difficulty": "medium",
       "content": "What is the key feature of a 'Transaction' Bundle in FHIR?",
@@ -10772,7 +10657,7 @@
       "type": "single"
     },
     {
-      "id": 659,
+      "id": 669,
       "category": "CapabilityStatement",
       "difficulty": "medium",
       "content": "What is the role of the 'security' field in a CapabilityStatement?",
@@ -10788,7 +10673,7 @@
       "type": "single"
     },
     {
-      "id": 660,
+      "id": 670,
       "category": "Validation",
       "difficulty": "medium",
       "content": "What does the 'severity' field in an OperationOutcome issue represent?",
@@ -10804,7 +10689,7 @@
       "type": "single"
     },
     {
-      "id": 661,
+      "id": 671,
       "category": "Terminology",
       "difficulty": "medium",
       "content": "What is the purpose of the 'Filter' element in a ValueSet?",
@@ -10820,7 +10705,7 @@
       "type": "single"
     },
     {
-      "id": 662,
+      "id": 672,
       "category": "Search Parameters",
       "difficulty": "medium",
       "content": "What does the '_text' search parameter filter in FHIR?",
@@ -10836,7 +10721,7 @@
       "type": "single"
     },
     {
-      "id": 663,
+      "id": 673,
       "category": "Security",
       "difficulty": "medium",
       "content": "What is the primary purpose of OAuth2 in FHIR systems?",
@@ -10852,7 +10737,7 @@
       "type": "single"
     },
     {
-      "id": 664,
+      "id": 674,
       "category": "Implementation Guides",
       "difficulty": "medium",
       "content": "What is the role of Constraints in a FHIR Profile?",
@@ -10868,7 +10753,7 @@
       "type": "single"
     },
     {
-      "id": 665,
+      "id": 675,
       "category": "FHIR Basics",
       "difficulty": "medium",
       "content": "What are the core design principles of FHIR? (Select all that apply)",
@@ -10886,7 +10771,7 @@
       "type": "multi"
     },
     {
-      "id": 666,
+      "id": 676,
       "category": "FHIR Basics",
       "difficulty": "medium",
       "content": "What does the 'language' field in a FHIR resource specify?",
@@ -10902,7 +10787,7 @@
       "type": "single"
     },
     {
-      "id": 667,
+      "id": 677,
       "category": "RESTful APIs",
       "difficulty": "medium",
       "content": "What does the '_summary=count' query parameter do?",
@@ -10918,7 +10803,7 @@
       "type": "single"
     },
     {
-      "id": 668,
+      "id": 678,
       "category": "Bundles",
       "difficulty": "medium",
       "content": "What is the purpose of the 'total' field in a SearchSet Bundle?",
@@ -10934,7 +10819,7 @@
       "type": "single"
     },
     {
-      "id": 669,
+      "id": 679,
       "category": "CapabilityStatement",
       "difficulty": "medium",
       "content": "What is the role of the 'interaction' field in a CapabilityStatement?",
@@ -10950,7 +10835,7 @@
       "type": "single"
     },
     {
-      "id": 670,
+      "id": 680,
       "category": "Validation",
       "difficulty": "medium",
       "content": "What is the purpose of the 'diagnostics' field in an OperationOutcome issue?",
@@ -10966,7 +10851,7 @@
       "type": "single"
     },
     {
-      "id": 671,
+      "id": 681,
       "category": "Terminology",
       "difficulty": "medium",
       "content": "What does the 'Compose' element in a ValueSet define?",
@@ -10982,7 +10867,7 @@
       "type": "single"
     },
     {
-      "id": 672,
+      "id": 682,
       "category": "Search Parameters",
       "difficulty": "medium",
       "content": "What does the '_has' search parameter filter?",
@@ -10998,7 +10883,7 @@
       "type": "single"
     },
     {
-      "id": 673,
+      "id": 683,
       "category": "Security",
       "difficulty": "medium",
       "content": "What is the purpose of 'AuditEvent' in FHIR?",
@@ -11014,7 +10899,7 @@
       "type": "single"
     },
     {
-      "id": 674,
+      "id": 684,
       "category": "Implementation Guides",
       "difficulty": "medium",
       "content": "What is the role of Profiles in an Implementation Guide?",
@@ -11030,24 +10915,7 @@
       "type": "single"
     },
     {
-      "id": 675,
-      "category": "FHIR Basics",
-      "difficulty": "medium",
-      "content": "What are the supported exchange formats in FHIR? (Select all that apply)",
-      "options": [
-        "JSON",
-        "XML",
-        "YAML",
-        "CSV"
-      ],
-      "correctAnswers": [
-        1,
-        2
-      ],
-      "type": "multi"
-    },
-    {
-      "id": 11,
+      "id": 686,
       "category": "Clinical Workflow",
       "difficulty": "hard",
       "content": "A hospital implements a referral management system. Which sequence of resources best represents the workflow?",
@@ -11063,7 +10931,7 @@
       "type": "single"
     },
     {
-      "id": 12,
+      "id": 687,
       "category": "Data Exchange",
       "difficulty": "medium",
       "content": "What HTTP status code should be returned when a resource is successfully created via POST?",
@@ -11079,7 +10947,7 @@
       "type": "single"
     },
     {
-      "id": 13,
+      "id": 688,
       "category": "Integration",
       "difficulty": "hard",
       "content": "When implementing a FHIR facade over a legacy system, which approach is most appropriate for handling identifiers?",
@@ -11095,7 +10963,7 @@
       "type": "single"
     },
     {
-      "id": 14,
+      "id": 689,
       "category": "Security",
       "difficulty": "medium",
       "content": "Given the SMART on FHIR context:\n{\n  'patient': '123',\n  'need_patient_banner': true,\n  'smart_style_url': 'https://...',\n  'scope': 'patient/*.read'\n}\nWhat operations are allowed?",
@@ -11111,7 +10979,7 @@
       "type": "single"
     },
     {
-      "id": 15,
+      "id": 690,
       "category": "Resource Validation",
       "difficulty": "hard",
       "content": "Given an invalid resource:\n{\n  'resourceType': 'Patient',\n  'birthDate': '2024-13-45'\n}\nWhat validation response is correct?",
@@ -11127,7 +10995,7 @@
       "type": "single"
     },
     {
-      "id": 16,
+      "id": 691,
       "category": "Data Exchange",
       "difficulty": "medium",
       "content": "A system needs to find all Observations with a specific LOINC code. Which search parameter is correct?",
@@ -11143,7 +11011,7 @@
       "type": "single"
     },
     {
-      "id": 17,
+      "id": 692,
       "category": "Integration",
       "difficulty": "hard",
       "content": "When implementing a FHIR server, how should version history be handled?",
@@ -11159,7 +11027,7 @@
       "type": "single"
     },
     {
-      "id": 18,
+      "id": 693,
       "category": "Clinical Workflow",
       "difficulty": "medium",
       "content": "Which resource combination best represents a medication order with pharmacy verification?",
@@ -11175,7 +11043,7 @@
       "type": "single"
     },
     {
-      "id": 19,
+      "id": 694,
       "category": "Security",
       "difficulty": "hard",
       "content": "How should a FHIR server handle requests with insufficient scopes?",
@@ -11191,7 +11059,7 @@
       "type": "single"
     },
     {
-      "id": 20,
+      "id": 695,
       "category": "Resource Operations",
       "difficulty": "medium",
       "content": "What is the correct approach for updating a resource when you don't have the latest version?",
@@ -11207,7 +11075,7 @@
       "type": "single"
     },
     {
-      "id": 21,
+      "id": 696,
       "category": "Integration",
       "difficulty": "hard",
       "content": "When implementing a subscription service, how should resource updates be handled?",
@@ -11223,7 +11091,7 @@
       "type": "single"
     },
     {
-      "id": 22,
+      "id": 697,
       "category": "Data Exchange",
       "difficulty": "medium",
       "content": "What is the correct way to include related resources in a search result?",
@@ -11239,7 +11107,7 @@
       "type": "single"
     },
     {
-      "id": 23,
+      "id": 698,
       "category": "Clinical Workflow",
       "difficulty": "hard",
       "content": "How should a system handle a patient merge scenario?",
@@ -11255,7 +11123,7 @@
       "type": "single"
     },
     {
-      "id": 24,
+      "id": 699,
       "category": "Security",
       "difficulty": "medium",
       "content": "What is the correct way to implement resource-level security?",
@@ -11271,7 +11139,7 @@
       "type": "single"
     },
     {
-      "id": 25,
+      "id": 700,
       "category": "Resource Validation",
       "difficulty": "hard",
       "content": "When implementing custom validation rules, where should they be defined?",
@@ -11287,7 +11155,7 @@
       "type": "single"
     },
     {
-      "id": 11,
+      "id": 701,
       "category": "Clinical Workflow",
       "difficulty": "hard",
       "content": "A hospital implements a referral management system. Which sequence of resources best represents the workflow?",
@@ -11303,7 +11171,7 @@
       "type": "single"
     },
     {
-      "id": 12,
+      "id": 702,
       "category": "Data Exchange",
       "difficulty": "medium",
       "content": "What HTTP status code should be returned when a resource is successfully created via POST?",
@@ -11319,7 +11187,7 @@
       "type": "single"
     },
     {
-      "id": 13,
+      "id": 703,
       "category": "Integration",
       "difficulty": "hard",
       "content": "When implementing a FHIR facade over a legacy system, which approach is most appropriate for handling identifiers?",
@@ -11335,7 +11203,7 @@
       "type": "single"
     },
     {
-      "id": 14,
+      "id": 704,
       "category": "Security",
       "difficulty": "medium",
       "content": "Given the SMART on FHIR context:\n{\n  'patient': '123',\n  'need_patient_banner': true,\n  'smart_style_url': 'https://...',\n  'scope': 'patient/*.read'\n}\nWhat operations are allowed?",
@@ -11351,7 +11219,7 @@
       "type": "single"
     },
     {
-      "id": 15,
+      "id": 705,
       "category": "Resource Validation",
       "difficulty": "hard",
       "content": "Given an invalid resource:\n{\n  'resourceType': 'Patient',\n  'birthDate': '2024-13-45'\n}\nWhat validation response is correct?",
@@ -11367,7 +11235,7 @@
       "type": "single"
     },
     {
-      "id": 16,
+      "id": 706,
       "category": "Data Exchange",
       "difficulty": "medium",
       "content": "A system needs to find all Observations with a specific LOINC code. Which search parameter is correct?",
@@ -11383,7 +11251,7 @@
       "type": "single"
     },
     {
-      "id": 17,
+      "id": 707,
       "category": "Integration",
       "difficulty": "hard",
       "content": "When implementing a FHIR server, how should version history be handled?",
@@ -11399,7 +11267,7 @@
       "type": "single"
     },
     {
-      "id": 18,
+      "id": 708,
       "category": "Clinical Workflow",
       "difficulty": "medium",
       "content": "Which resource combination best represents a medication order with pharmacy verification?",
@@ -11415,7 +11283,7 @@
       "type": "single"
     },
     {
-      "id": 19,
+      "id": 709,
       "category": "Security",
       "difficulty": "hard",
       "content": "How should a FHIR server handle requests with insufficient scopes?",
@@ -11431,7 +11299,7 @@
       "type": "single"
     },
     {
-      "id": 20,
+      "id": 710,
       "category": "Resource Operations",
       "difficulty": "medium",
       "content": "What is the correct approach for updating a resource when you don't have the latest version?",
@@ -11447,7 +11315,7 @@
       "type": "single"
     },
     {
-      "id": 21,
+      "id": 711,
       "category": "Integration",
       "difficulty": "hard",
       "content": "When implementing a subscription service, how should resource updates be handled?",
@@ -11463,7 +11331,7 @@
       "type": "single"
     },
     {
-      "id": 22,
+      "id": 712,
       "category": "Data Exchange",
       "difficulty": "medium",
       "content": "What is the correct way to include related resources in a search result?",
@@ -11479,7 +11347,7 @@
       "type": "single"
     },
     {
-      "id": 23,
+      "id": 713,
       "category": "Clinical Workflow",
       "difficulty": "hard",
       "content": "How should a system handle a patient merge scenario?",
@@ -11495,7 +11363,7 @@
       "type": "single"
     },
     {
-      "id": 24,
+      "id": 714,
       "category": "Security",
       "difficulty": "medium",
       "content": "What is the correct way to implement resource-level security?",
@@ -11511,7 +11379,7 @@
       "type": "single"
     },
     {
-      "id": 25,
+      "id": 715,
       "category": "Resource Validation",
       "difficulty": "hard",
       "content": "When implementing custom validation rules, where should they be defined?",
@@ -11527,7 +11395,7 @@
       "type": "single"
     },
     {
-      "id": 26,
+      "id": 716,
       "category": "XML Analysis",
       "difficulty": "hard",
       "content": "Given the XML:\n<MedicationRequest>\n  <status value='active'/>\n  <intent value='order'/>\n  <medicationCodeableConcept>\n    <coding>\n      <system value='http://www.nlm.nih.gov/research/umls/rxnorm'/>\n      <code value='1234567'/>\n    </coding>\n  </medicationCodeableConcept>\n  <subject>\n    <reference value='Patient/123'/>\n  </subject>\n</MedicationRequest>\nWhat is the correct FHIRPath to access the medication code?",
@@ -11543,7 +11411,7 @@
       "type": "single"
     },
     {
-      "id": 27,
+      "id": 717,
       "category": "JSON Analysis",
       "difficulty": "medium",
       "content": "In a FHIR Bundle containing multiple entries, how do you correctly reference a specific resource entry?",
@@ -11559,7 +11427,7 @@
       "type": "single"
     },
     {
-      "id": 28,
+      "id": 718,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A hospital needs to implement a system for tracking patient transfers between departments, including the reason for transfer and required equipment. Which combination of resources best models this workflow?",
@@ -11575,7 +11443,7 @@
       "type": "single"
     },
     {
-      "id": 29,
+      "id": 719,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "How should you represent an empty array in FHIR XML?",
@@ -11591,7 +11459,7 @@
       "type": "single"
     },
     {
-      "id": 30,
+      "id": 720,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A clinic needs to implement a vaccination scheduling system that includes pre-screening questionnaires and post-vaccination monitoring. Which resources should be used?",
@@ -11607,7 +11475,7 @@
       "type": "single"
     },
     {
-      "id": 31,
+      "id": 721,
       "category": "JSON Analysis",
       "difficulty": "hard",
       "content": "Given:\n{\n  'resourceType': 'Observation',\n  'status': 'final',\n  'code': {\n    'coding': [{\n      'system': 'http://loinc.org',\n      'code': '8867-4',\n      'display': 'Heart rate'\n    }]\n  },\n  'valueQuantity': {\n    'value': 44,\n    'unit': 'beats/minute'\n  }\n}\nWhat is the correct way to reference the heart rate value?",
@@ -11623,7 +11491,7 @@
       "type": "single"
     },
     {
-      "id": 32,
+      "id": 722,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "An emergency department needs to implement a triage system that tracks patient severity, waiting times, and resource allocation. Which resources would best model this?",
@@ -11639,7 +11507,7 @@
       "type": "single"
     },
     {
-      "id": 33,
+      "id": 723,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "When representing a CodeableConcept in XML, what is the correct element structure?",
@@ -11655,7 +11523,7 @@
       "type": "single"
     },
     {
-      "id": 34,
+      "id": 724,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A mental health clinic needs to implement a system for tracking therapy sessions, including session notes, treatment plans, and progress tracking. Which resources should be used?",
@@ -11671,7 +11539,7 @@
       "type": "single"
     },
     {
-      "id": 35,
+      "id": 725,
       "category": "JSON Analysis",
       "difficulty": "hard",
       "content": "In a FHIR transaction Bundle, what is the correct way to reference a resource that will be created in the same transaction?",
@@ -11687,7 +11555,7 @@
       "type": "single"
     },
     {
-      "id": 36,
+      "id": 726,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A laboratory needs to handle complex test panels with multiple components and reflex testing. Given this JSON:\n{\n  'resourceType': 'ServiceRequest',\n  'status': 'active',\n  'intent': 'order',\n  'code': {\n    'coding': [{\n      'system': 'http://loinc.org',\n      'code': 'panel-1'\n    }]\n  },\n  'subject': {'reference': 'Patient/123'}\n}\nWhat additional resources are needed for complete implementation?",
@@ -11703,7 +11571,7 @@
       "type": "single"
     },
     {
-      "id": 37,
+      "id": 727,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "Given an Observation with nested components:\n<Observation>\n  <component>\n    <code>\n      <coding>\n        <system value='http://loinc.org'/>\n        <code value='8480-6'/>\n      </coding>\n    </code>\n    <valueQuantity>\n      <value value='120'/>\n      <unit value='mmHg'/>\n    </valueQuantity>\n  </component>\n</Observation>\nWhat is the correct FHIRPath to access the component value?",
@@ -11719,7 +11587,7 @@
       "type": "single"
     },
     {
-      "id": 38,
+      "id": 728,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A hospital needs to implement a system for tracking isolation precautions, including reason, type, and duration. Given multiple locations and care teams, what is the best implementation?",
@@ -11735,7 +11603,7 @@
       "type": "single"
     },
     {
-      "id": 39,
+      "id": 729,
       "category": "JSON Analysis",
       "difficulty": "hard",
       "content": "Given a Bundle containing search results:\n{\n  'resourceType': 'Bundle',\n  'type': 'searchset',\n  'total': 3,\n  'link': [{\n    'relation': 'self',\n    'url': 'base/Patient?_count=2'\n  },\n  {\n    'relation': 'next',\n    'url': 'base/Patient?_count=2&_offset=2'\n  }]\n}\nWhat does this JSON structure indicate about pagination?",
@@ -11751,7 +11619,7 @@
       "type": "single"
     },
     {
-      "id": 40,
+      "id": 730,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "An oncology clinic needs to track chemotherapy protocols, including drug combinations, timing, and adverse reactions. What resource combination best models this?",
@@ -11767,7 +11635,7 @@
       "type": "single"
     },
     {
-      "id": 41,
+      "id": 731,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "Given a contained resource in XML:\n<Medication>\n  <contained>\n    <Organization>\n      <id value='org1'/>\n      <name value='Pharmacy XYZ'/>\n    </Organization>\n  </contained>\n  <manufacturer>\n    <reference value='#org1'/>\n  </manufacturer>\n</Medication>\nWhat is the correct way to reference the contained Organization?",
@@ -11783,7 +11651,7 @@
       "type": "single"
     },
     {
-      "id": 42,
+      "id": 732,
       "category": "JSON Analysis",
       "difficulty": "hard",
       "content": "Given a Patient resource with extensions:\n{\n  'resourceType': 'Patient',\n  'extension': [{\n    'url': 'http://example.org/StructureDefinition/preferred-language',\n    'valueCode': 'en-US'\n  }]\n}\nWhat is the correct way to search for patients with this extension?",
@@ -11799,7 +11667,7 @@
       "type": "single"
     },
     {
-      "id": 43,
+      "id": 733,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A telemedicine platform needs to handle video consultations, including scheduling, documentation, and billing. Which resource combination is most appropriate?",
@@ -11815,7 +11683,7 @@
       "type": "single"
     },
     {
-      "id": 44,
+      "id": 734,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "When representing a date with time zone in FHIR XML, what is the correct format?",
@@ -11831,7 +11699,7 @@
       "type": "single"
     },
     {
-      "id": 45,
+      "id": 735,
       "category": "Scenario",
       "difficulty": "hard",
       "content": "A hospital needs to implement a system for tracking patient dietary restrictions and meal delivery. Which resources and extensions are needed?",
@@ -11847,7 +11715,7 @@
       "type": "single"
     },
     {
-      "id": 46,
+      "id": 736,
       "category": "Emergency Workflow",
       "difficulty": "hard",
       "content": "Given the JSON for an emergency admission:\n{\n  'resourceType': 'Encounter',\n  'status': 'in-progress',\n  'class': {\n    'system': 'http://terminology.hl7.org/CodeSystem/v3-ActCode',\n    'code': 'EMER'\n  },\n  'priority': {\n    'coding': [{\n      'system': 'http://terminology.hl7.org/CodeSystem/v3-ActPriority',\n      'code': 'EM'\n    }]\n  }\n}\nWhat additional resources are needed for complete triage workflow?",
@@ -11863,7 +11731,7 @@
       "type": "single"
     },
     {
-      "id": 47,
+      "id": 737,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "Given a Composition in XML:\n<Composition>\n  <section>\n    <code>\n      <coding>\n        <system value='http://loinc.org'/>\n        <code value='11450-4'/>\n      </coding>\n    </code>\n    <entry>\n      <reference value='Observation/blood-pressure'/>\n    </entry>\n  </section>\n</Composition>\nHow do you correctly reference the blood pressure observation?",
@@ -11879,7 +11747,7 @@
       "type": "single"
     },
     {
-      "id": 48,
+      "id": 738,
       "category": "Clinical Scenario",
       "difficulty": "hard",
       "content": "A hospital implements post-surgery monitoring. Given this Observation:\n{\n  'resourceType': 'Observation',\n  'status': 'final',\n  'code': {\n    'coding': [{\n      'system': 'http://loinc.org',\n      'code': '8867-4'\n    }]\n  },\n  'interpretation': [{\n    'coding': [{\n      'system': 'http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation',\n      'code': 'H'\n    }]\n  }]\n}\nWhat additional resources are needed for automated alerts?",
@@ -11895,7 +11763,7 @@
       "type": "single"
     },
     {
-      "id": 49,
+      "id": 739,
       "category": "JSON Analysis",
       "difficulty": "hard",
       "content": "Given a Bundle with transactions:\n{\n  'resourceType': 'Bundle',\n  'type': 'transaction',\n  'entry': [{\n    'request': {\n      'method': 'POST',\n      'url': 'Patient'\n    },\n    'resource': {\n      'resourceType': 'Patient',\n      'id': 'temp-1'\n    }\n  },\n  {\n    'request': {\n      'method': 'POST',\n      'url': 'Encounter'\n    },\n    'resource': {\n      'resourceType': 'Encounter',\n      'subject': {\n        'reference': 'urn:uuid:temp-1'\n      }\n    }\n  }]\n}\nWhat is the correct way to reference the first resource in the second?",
@@ -11911,7 +11779,7 @@
       "type": "single"
     },
     {
-      "id": 50,
+      "id": 740,
       "category": "Integration Scenario",
       "difficulty": "hard",
       "content": "A system needs to integrate lab results with different coding systems. Given:\n{\n  'resourceType': 'Observation',\n  'code': {\n    'coding': [{\n      'system': 'http://acme.lab/codes',\n      'code': 'CBC001',\n      'display': 'Complete Blood Count'\n    }]\n  }\n}\nWhat's the best approach for standardization?",
@@ -11927,7 +11795,7 @@
       "type": "single"
     },
     {
-      "id": 51,
+      "id": 741,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "In a FHIR XML document with extensions:\n<Patient>\n  <extension url='http://example.org/StructureDefinition/birth-place'>\n    <valueAddress>\n      <city value='Tokyo'/>\n      <country value='Japan'/>\n    </valueAddress>\n  </extension>\n</Patient>\nWhat's the correct FHIRPath to access the birth place country?",
@@ -11943,7 +11811,7 @@
       "type": "single"
     },
     {
-      "id": 52,
+      "id": 742,
       "category": "Workflow Scenario",
       "difficulty": "hard",
       "content": "A radiology department needs to track contrast administration during imaging. Which resources best model this?",
@@ -11959,7 +11827,7 @@
       "type": "single"
     },
     {
-      "id": 53,
+      "id": 743,
       "category": "Clinical Documentation",
       "difficulty": "hard",
       "content": "Given a Clinical Note JSON:\n{\n  'resourceType': 'DocumentReference',\n  'status': 'current',\n  'type': {\n    'coding': [{\n      'system': 'http://loinc.org',\n      'code': '11506-3'\n    }]\n  },\n  'content': [{\n    'attachment': {\n      'contentType': 'text/plain',\n      'data': 'base64-encoded-content'\n    }\n  }]\n}\nWhat's the correct way to handle document versioning?",
@@ -11975,7 +11843,7 @@
       "type": "single"
     },
     {
-      "id": 54,
+      "id": 744,
       "category": "XML Analysis",
       "difficulty": "hard",
       "content": "Given a CarePlan XML:\n<CarePlan>\n  <activity>\n    <detail>\n      <kind value='ServiceRequest'/>\n      <status value='scheduled'/>\n      <scheduledTiming>\n        <repeat>\n          <frequency value='2'/>\n          <period value='1'/>\n          <periodUnit value='d'/>\n        </repeat>\n      </scheduledTiming>\n    </detail>\n  </activity>\n</CarePlan>\nWhat does this timing represent?",
@@ -11991,7 +11859,7 @@
       "type": "single"
     },
     {
-      "id": 55,
+      "id": 745,
       "category": "Integration Scenario",
       "difficulty": "hard",
       "content": "A system receives lab results with custom codes. Given:\n{\n  'resourceType': 'Observation',\n  'code': {\n    'coding': [{\n      'system': 'http://lab.local/codes',\n      'code': 'GLU',\n      'display': 'Glucose'\n    }]\n  }\n}\nHow should you map to standard terminology?",
@@ -12007,7 +11875,7 @@
       "type": "single"
     },
     {
-      "id": 56,
+      "id": 746,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "Given medication prescription XML:\n<MedicationRequest>\n  <dosageInstruction>\n    <timing>\n      <repeat>\n        <boundsPeriod>\n          <start value='2024-01-01'/>\n          <end value='2024-01-10'/>\n        </boundsPeriod>\n        <frequency value='1'/>\n        <period value='8'/>\n        <periodUnit value='h'/>\n      </repeat>\n    </timing>\n  </dosageInstruction>\n</MedicationRequest>\nWhat is the dosing schedule?",
@@ -12023,7 +11891,7 @@
       "type": "single"
     },
     {
-      "id": 57,
+      "id": 747,
       "category": "Workflow Scenario",
       "difficulty": "hard",
       "content": "A clinic needs to implement a referral workflow with tracking. Given:\n{\n  'resourceType': 'ServiceRequest',\n  'status': 'active',\n  'intent': 'order',\n  'category': [{\n    'coding': [{\n      'system': 'http://snomed.info/sct',\n      'code': '103696004',\n      'display': 'Patient referral'\n    }]\n  }]\n}\nWhat additional resources are needed?",
@@ -12039,7 +11907,7 @@
       "type": "single"
     },
     {
-      "id": 58,
+      "id": 748,
       "category": "JSON Analysis",
       "difficulty": "hard",
       "content": "Given a Bundle containing a batch request:\n{\n  'resourceType': 'Bundle',\n  'type': 'batch',\n  'entry': [{\n    'request': {\n      'method': 'POST',\n      'url': 'Patient'\n    },\n    'resource': {\n      'resourceType': 'Patient',\n      'identifier': [{\n        'system': 'http://hospital.org',\n        'value': '12345'\n      }]\n    }\n  }]\n}\nWhat happens if the Patient already exists?",
@@ -12055,7 +11923,7 @@
       "type": "single"
     },
     {
-      "id": 59,
+      "id": 749,
       "category": "Clinical Scenario",
       "difficulty": "hard",
       "content": "A hospital implements smart infusion pumps. Given:\n{\n  'resourceType': 'Device',\n  'status': 'active',\n  'deviceName': [{\n    'name': 'Smart Pump 2000',\n    'type': 'manufacturer-name'\n  }]\n}\nWhat resources are needed to track infusion data?",
@@ -12071,7 +11939,7 @@
       "type": "single"
     },
     {
-      "id": 60,
+      "id": 750,
       "category": "Emergency Response",
       "difficulty": "hard",
       "content": "Given an emergency response JSON:\n{\n  'resourceType': 'Encounter',\n  'status': 'in-progress',\n  'type': [{\n    'coding': [{\n      'system': 'http://snomed.info/sct',\n      'code': '11429006',\n      'display': 'Consultation for emergency care'\n    }]\n  }],\n  'priority': {\n    'coding': [{\n      'code': 'EM'\n    }]\n  }\n}\nWhat additional resources track response times and outcomes?",
@@ -12087,7 +11955,7 @@
       "type": "single"
     },
     {
-      "id": 61,
+      "id": 751,
       "category": "XML Analysis",
       "difficulty": "hard",
       "content": "Given vital signs XML:\n<Observation>\n  <component>\n    <code>\n      <coding>\n        <system value='http://loinc.org'/>\n        <code value='8867-4'/>\n      </coding>\n    </code>\n    <valueQuantity>\n      <value value='72'/>\n      <unit value='/min'/>\n    </valueQuantity>\n  </component>\n  <component>\n    <code>\n      <coding>\n        <system value='http://loinc.org'/>\n        <code value='8480-6'/>\n      </coding>\n    </code>\n    <valueQuantity>\n      <value value='120'/>\n      <unit value='mmHg'/>\n    </valueQuantity>\n  </component>\n</Observation>\nHow do you reference the heart rate value?",
@@ -12103,7 +11971,7 @@
       "type": "single"
     },
     {
-      "id": 62,
+      "id": 752,
       "category": "Clinical Workflow",
       "difficulty": "hard",
       "content": "A hospital implements sepsis alerts. Given:\n{\n  'resourceType': 'Flag',\n  'status': 'active',\n  'code': {\n    'coding': [{\n      'system': 'http://terminology.hl7.org/CodeSystem/flag-code',\n      'code': 'suspected-sepsis'\n    }]\n  }\n}\nWhat resources implement the complete workflow?",
@@ -12119,7 +11987,7 @@
       "type": "single"
     },
     {
-      "id": 63,
+      "id": 753,
       "category": "XML Analysis",
       "difficulty": "medium",
       "content": "Given a care team XML:\n<CareTeam>\n  <participant>\n    <role>\n      <coding>\n        <system value='http://snomed.info/sct'/>\n        <code value='446050000'/>\n        <display value='PCP'/>\n      </coding>\n    </role>\n    <member>\n      <reference value='Practitioner/1'/>\n    </member>\n  </participant>\n</CareTeam>\nWhat's the correct way to reference the PCP?",
@@ -12135,7 +12003,7 @@
       "type": "single"
     },
     {
-      "id": 64,
+      "id": 754,
       "category": "Integration",
       "difficulty": "hard",
       "content": "Given a medication order JSON:\n{\n  'resourceType': 'MedicationRequest',\n  'status': 'active',\n  'medicationCodeableConcept': {\n    'coding': [{\n      'system': 'http://www.nlm.nih.gov/research/umls/rxnorm',\n      'code': '1234'\n    }]\n  },\n  'dosageInstruction': [{\n    'timing': {\n      'repeat': {\n        'frequency': 1,\n        'period': 8,\n        'periodUnit': 'h'\n      }\n    }\n  }]\n}\nWhat resources track administration compliance?",
@@ -12151,7 +12019,7 @@
       "type": "single"
     },
     {
-      "id": 65,
+      "id": 755,
       "category": "Workflow",
       "difficulty": "hard",
       "content": "A clinic implements vaccine inventory management. What resources model stock levels and reordering?",
@@ -12167,7 +12035,7 @@
       "type": "single"
     },
     {
-      "id": 66,
+      "id": 756,
       "category": "Interoperability",
       "difficulty": "hard",
       "content": "Given a CDA to FHIR conversion JSON:\n{\n  'resourceType': 'Bundle',\n  'type': 'document',\n  'entry': [{\n    'resource': {\n      'resourceType': 'Composition',\n      'section': [{\n        'code': {\n          'coding': [{\n            'system': 'http://loinc.org',\n            'code': '11450-4'\n          }]\n        }\n      }]\n    }\n  }]\n}\nWhat's the correct approach for maintaining document integrity?",
@@ -12183,7 +12051,7 @@
       "type": "single"
     },
     {
-      "id": 67,
+      "id": 757,
       "category": "XML Analysis",
       "difficulty": "hard",
       "content": "Given allergy XML:\n<AllergyIntolerance>\n  <clinicalStatus>\n    <coding>\n      <system value='http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical'/>\n      <code value='active'/>\n    </coding>\n  </clinicalStatus>\n  <reaction>\n    <manifestation>\n      <coding>\n        <system value='http://snomed.info/sct'/>\n        <code value='247472004'/>\n      </coding>\n    </manifestation>\n    <severity value='severe'/>\n  </reaction>\n</AllergyIntolerance>\nHow do you reference the reaction severity?",
@@ -12199,7 +12067,7 @@
       "type": "single"
     },
     {
-      "id": 68,
+      "id": 758,
       "category": "Care Coordination",
       "difficulty": "hard",
       "content": "Given care plan JSON:\n{\n  'resourceType': 'CarePlan',\n  'status': 'active',\n  'intent': 'plan',\n  'activity': [{\n    'reference': {\n      'reference': 'ServiceRequest/physio'\n    },\n    'status': 'scheduled'\n  }]\n}\nWhat resources track progress and outcomes?",
@@ -12215,7 +12083,7 @@
       "type": "single"
     },
     {
-      "id": 69,
+      "id": 759,
       "category": "Resource Versioning",
       "difficulty": "hard",
       "content": "Given versioned resource:\n{\n  'resourceType': 'Patient',\n  'meta': {\n    'versionId': '2',\n    'lastUpdated': '2024-01-15T14:30:00Z'\n  },\n  'active': true\n}\nWhat's the correct way to reference a specific version?",
@@ -12231,7 +12099,7 @@
       "type": "single"
     },
     {
-      "id": 70,
+      "id": 760,
       "category": "Patient Safety",
       "difficulty": "hard",
       "content": "Given patient safety alert:\n{\n  'resourceType': 'Flag',\n  'status': 'active',\n  'code': {\n    'coding': [{\n      'system': 'http://terminology.hl7.org/CodeSystem/flag-code',\n      'code': 'fall-risk'\n    }]\n  }\n}\nWhat resources implement comprehensive risk monitoring?",
@@ -12247,7 +12115,7 @@
       "type": "single"
     },
     {
-      "id": 71,
+      "id": 761,
       "category": "Troubleshooting",
       "difficulty": "medium",
       "content": "When receiving a '422 Unprocessable Entity' error during a FHIR resource creation, what should you check first?",
@@ -12263,7 +12131,7 @@
       "type": "single"
     },
     {
-      "id": 72,
+      "id": 762,
       "category": "Troubleshooting",
       "difficulty": "hard",
       "content": "Given error:\n{\n  'resourceType': 'OperationOutcome',\n  'issue': [{\n    'severity': 'error',\n    'code': 'invalid',\n    'details': {\n      'text': 'Reference could not be resolved'\n    },\n    'expression': ['Observation.subject']\n  }]\n}\nWhat's the likely cause?",
@@ -12279,7 +12147,7 @@
       "type": "single"
     },
     {
-      "id": 73,
+      "id": 763,
       "category": "Troubleshooting",
       "difficulty": "hard",
       "content": "During a FHIR transaction bundle processing, some operations fail while others succeed. What's the appropriate error handling approach?",
@@ -12295,7 +12163,7 @@
       "type": "single"
     },
     {
-      "id": 74,
+      "id": 764,
       "category": "Troubleshooting",
       "difficulty": "medium",
       "content": "When a FHIR search returns unexpected results, what should you check first?",
@@ -12311,7 +12179,7 @@
       "type": "single"
     },
     {
-      "id": 75,
+      "id": 765,
       "category": "Troubleshooting",
       "difficulty": "hard",
       "content": "When implementing a FHIR subscription and notifications aren't being received, what's the troubleshooting sequence?",
@@ -12327,7 +12195,7 @@
       "type": "single"
     },
     {
-      "id": 76,
+      "id": 766,
       "category": "Troubleshooting",
       "difficulty": "medium",
       "content": "When receiving a '409 Conflict' error during resource update, what's the most likely cause?",
@@ -12343,7 +12211,7 @@
       "type": "single"
     },
     {
-      "id": 77,
+      "id": 767,
       "category": "Troubleshooting",
       "difficulty": "hard",
       "content": "Given error during capability statement retrieval:\n{\n  'resourceType': 'OperationOutcome',\n  'issue': [{\n    'severity': 'error',\n    'code': 'not-supported',\n    'diagnostics': 'Operation not supported'\n  }]\n}\nWhat should you check?",
@@ -12359,7 +12227,7 @@
       "type": "single"
     },
     {
-      "id": 78,
+      "id": 768,
       "category": "Troubleshooting",
       "difficulty": "hard",
       "content": "When FHIR resource references are breaking after data migration, what's the best fix?",
@@ -12373,6 +12241,1663 @@
         1
       ],
       "type": "single"
+    },
+    {
+      "id": 769,
+      "category": "FHIR Basics",
+      "difficulty": "medium",
+      "content": "What is the role of the 'contained' field in a FHIR resource?",
+      "options": [
+        "To embed resources that cannot exist independently",
+        "To log metadata about the resource",
+        "To define relationships between resources",
+        "To validate the resource schema"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 770,
+      "category": "RESTful APIs",
+      "difficulty": "medium",
+      "content": "What does the '_format' query parameter specify in a FHIR request?",
+      "options": [
+        "The format of the response (e.g., JSON, XML)",
+        "The structure of the resource",
+        "The filters applied to the response",
+        "The metadata included in the response"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 771,
+      "category": "Bundles",
+      "difficulty": "medium",
+      "content": "What is the purpose of a 'Batch' Bundle in FHIR?",
+      "options": [
+        "To process multiple operations independently",
+        "To validate a group of related resources",
+        "To store metadata about resources",
+        "To represent the results of a search query"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 772,
+      "category": "CapabilityStatement",
+      "difficulty": "medium",
+      "content": "What does the 'format' field in a CapabilityStatement describe?",
+      "options": [
+        "The data formats supported by the server (e.g., JSON, XML)",
+        "The search parameters available",
+        "The profiles conformed to by the server",
+        "The metadata for the server"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 773,
+      "category": "Validation",
+      "difficulty": "medium",
+      "content": "What does the 'code' field in an OperationOutcome issue represent?",
+      "options": [
+        "The type of issue detected (e.g., invalid, required)",
+        "The severity of the issue",
+        "The HTTP status code",
+        "The diagnostic information"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 774,
+      "category": "Terminology",
+      "difficulty": "medium",
+      "content": "What is the role of the 'ValueSet' resource in FHIR?",
+      "options": [
+        "To define a set of valid codes for use in healthcare data",
+        "To validate relationships between resources",
+        "To store metadata about resources",
+        "To map codes between terminologies"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 775,
+      "category": "Search Parameters",
+      "difficulty": "medium",
+      "content": "What does the ':missing=false' modifier in a FHIR search indicate?",
+      "options": [
+        "Filters resources where the specified field is present",
+        "Filters resources where the specified field is missing",
+        "Excludes unrelated resources from the response",
+        "Sorts resources alphabetically"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 776,
+      "category": "Security",
+      "difficulty": "medium",
+      "content": "What is the purpose of TLS in FHIR systems?",
+      "options": [
+        "To encrypt data transmitted between client and server",
+        "To validate the structure of resources",
+        "To log interactions with the server",
+        "To store metadata for secure transactions"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 777,
+      "category": "Implementation Guides",
+      "difficulty": "medium",
+      "content": "What is the role of Extensions in a FHIR Implementation Guide?",
+      "options": [
+        "To allow additional information not part of the base specification",
+        "To validate relationships between resources",
+        "To map terminology codes",
+        "To store usage statistics for resources"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 778,
+      "category": "FHIR Basics",
+      "difficulty": "medium",
+      "content": "What are the official formats for FHIR data exchange? (Select all that apply)",
+      "options": [
+        "JSON",
+        "XML",
+        "YAML",
+        "CSV"
+      ],
+      "correctAnswers": [
+        1,
+        2
+      ],
+      "type": "multi"
+    },
+    {
+      "id": 779,
+      "category": "FHIR Basics",
+      "difficulty": "medium",
+      "content": "What is the purpose of the 'implicitRules' field in a FHIR resource?",
+      "options": [
+        "To specify the rules or guidelines followed when creating the resource",
+        "To define the metadata structure",
+        "To log server interactions",
+        "To validate the schema of the resource"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 780,
+      "category": "RESTful APIs",
+      "difficulty": "medium",
+      "content": "What does the '_pretty=true' query parameter do?",
+      "options": [
+        "Formats the response to be human-readable",
+        "Filters resources by relationships",
+        "Includes metadata in the response",
+        "Sorts resources by a specific attribute"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 781,
+      "category": "Bundles",
+      "difficulty": "medium",
+      "content": "What is the purpose of the 'entry' field in a FHIR Bundle?",
+      "options": [
+        "To list the resources included in the Bundle",
+        "To define metadata about the Bundle",
+        "To specify the format of the Bundle",
+        "To log interactions within the Bundle"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 782,
+      "category": "CapabilityStatement",
+      "difficulty": "medium",
+      "content": "What does the 'kind' field in a CapabilityStatement describe?",
+      "options": [
+        "The purpose of the CapabilityStatement (e.g., instance, capability, requirements)",
+        "The profiles conformed to by the server",
+        "The security mechanisms supported",
+        "The formats available for data exchange"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 783,
+      "category": "Validation",
+      "difficulty": "medium",
+      "content": "What does the 'expression' field in an OperationOutcome issue specify?",
+      "options": [
+        "The path to the element where the issue occurred",
+        "The severity of the issue",
+        "The HTTP status code of the operation",
+        "The diagnostic information for the issue"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 784,
+      "category": "Terminology",
+      "difficulty": "medium",
+      "content": "What is the function of a 'ConceptMap' in FHIR?",
+      "options": [
+        "To map codes between different terminologies",
+        "To define the structure of a ValueSet",
+        "To log usage of terminologies",
+        "To validate schemas of resources"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 785,
+      "category": "Search Parameters",
+      "difficulty": "medium",
+      "content": "What does the '_has' search parameter allow in FHIR?",
+      "options": [
+        "Filtering resources based on their relationships with other resources",
+        "Sorting resources by their metadata",
+        "Excluding unrelated resources from the response",
+        "Limiting the response to specific types"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 786,
+      "category": "Security",
+      "difficulty": "medium",
+      "content": "What is the purpose of 'AuditEvent' in FHIR?",
+      "options": [
+        "To log security-related events and interactions",
+        "To enforce access control policies",
+        "To validate resource schemas",
+        "To encrypt sensitive data"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 787,
+      "category": "Implementation Guides",
+      "difficulty": "medium",
+      "content": "What is the role of Constraints in a FHIR Profile?",
+      "options": [
+        "To enforce rules and restrictions on resource elements",
+        "To log interactions with the server",
+        "To map terminology codes",
+        "To validate data formats"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 788,
+      "category": "FHIR Basics",
+      "difficulty": "medium",
+      "content": "What are the core design principles of FHIR? (Select all that apply)",
+      "options": [
+        "Interoperability",
+        "Support for RESTful APIs",
+        "Mandatory centralized storage",
+        "Ease of implementation"
+      ],
+      "correctAnswers": [
+        1,
+        2,
+        4
+      ],
+      "type": "multi"
+    },
+    {
+      "id": 789,
+      "category": "",
+      "difficulty": "medium",
+      "content": "What is the purpose of the character \"0x0D\"?",
+      "options": [
+        "Marks the end of each segment",
+        "Composite Delimiter",
+        "Subcomposite Delimiter",
+        "Sub-Subcomposite Delimiter"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 790,
+      "category": "",
+      "difficulty": "medium",
+      "content": "What is the purpose of the character \" | \" ?",
+      "options": [
+        "Marks the end of each segment",
+        "Composite Delimiter",
+        "Subcomposite Delimiter",
+        "Sub-Subcomposite Delimiter"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 791,
+      "category": "",
+      "difficulty": "medium",
+      "content": "What is the purpose of the character \" & \" ?",
+      "options": [
+        "Marks the end of each segment",
+        "Composite Delimiter",
+        "Subcomposite Delimiter",
+        "Sub-Subcomposite Delimiter"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 792,
+      "category": "",
+      "difficulty": "medium",
+      "content": "What is the purpose of the character \" ^ \" ?",
+      "options": [
+        "Marks the end of each segment",
+        "Composite Delimiter",
+        "Subcomposite Delimiter",
+        "Sub-Subcomposite Delimiter"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 793,
+      "category": "",
+      "difficulty": "medium",
+      "content": "What is the purpose of the character \" \\ \" ?",
+      "options": [
+        "Escape Character",
+        "Seperates Repeating Fields",
+        "Subcomposite Delimiter",
+        "Sub-Subcomposite Delimiter"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 794,
+      "category": "",
+      "difficulty": "medium",
+      "content": "What is the purpose of the character \" ~ \" ?",
+      "options": [
+        "Escape Character",
+        "Seperates Repeating Fields",
+        "Subcomposite Delimiter",
+        "Sub-Subcomposite Delimiter"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 795,
+      "category": "",
+      "difficulty": "medium",
+      "content": "The _______ of HL7 is to provide standards and solutions for the healthcare industry's interoperability challenges.",
+      "options": [
+        "purpose",
+        "goal",
+        "mission",
+        "sesion"
+      ],
+      "correctAnswers": [
+        1,2,3
+      ],
+      "type": "multi"
+    },
+    {
+      "id": 796,
+      "category": "",
+      "difficulty": "medium",
+      "content": "The upper most layer of the OSI model identifies networking entities to facilitate networking requests by end-user requests, determines resource availability, synchronizes communication, and manages application-specific networking requirements.",
+      "options": [
+        "Physical",
+        "Data Link",
+        "Network",
+        "Application"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 797,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR is a _____ interface.",
+      "options": [
+        "SOAP based",
+        "REST",
+        "RESTful",
+        "SOA based"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 798,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR mainly deals with:",
+      "options": [
+        "Documents",
+        "Services",
+        "Messages",
+        "All of the above"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 799,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR covers _____ of the most common use cases.",
+      "options": [
+        "The majority",
+        "50%",
+        "80%",
+        "20%"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 800,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR uses a ______ protocol.",
+      "options": [
+        "Service Object",
+        "Delimited",
+        "State",
+        "Web based"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 801,
+      "category": "",
+      "difficulty": "medium",
+      "content": "A FHIR resource is equivalent to a V2 _______",
+      "options": [
+        "Attribute",
+        "Component",
+        "Section",
+        "Segment"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 802,
+      "category": "",
+      "difficulty": "medium",
+      "content": "A FHIR extension is equivalent to a V2 ______",
+      "options": [
+        "Standard segment",
+        "Section",
+        "Private component",
+        "Z-segment"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 803,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR version compatibility is achieved by not changing the ______.",
+      "options": [
+        "Access path",
+        "Data attribute definition",
+        "Data type definition",
+        "Resource definition"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 804,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR version compatibility is achieved by not changing the ______.",
+      "options": [
+        "Access path",
+        "Data attribute definition",
+        "Data type definition",
+        "Resource definition"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 805,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR resources are equivalent to CDA _______.",
+      "options": [
+        "Segments",
+        "Sections",
+        "Messages",
+        "Templates"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
     }
+    ,
+    {
+      "id": 806,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR can create _______ CDA document.",
+      "options": [
+        "a derived",
+        "an encapsulated",
+        "PDF version of the",
+        "a replica of a"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    }
+    ,
+    {
+      "id": 807,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR and CDA documents have a _____ in common.",
+      "options": [
+        "template",
+        "structure",
+        "protocol",
+        "narrative"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    } ,
+    {
+      "id": 808,
+      "category": "",
+      "difficulty": "medium",
+      "content": "CCDA is _______ of CDA",
+      "options": [
+        "a non-markup version",
+        "a consolidated version",
+        "a more secure implementation",
+        "an international version"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 809,
+      "category": "",
+      "difficulty": "medium",
+      "content": "The CDA is intended to _______",
+      "options": [
+        "address 80% of the use cases",
+        "be all inclusive",
+        "replace FHIR",
+        "be used for messaging only"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 810,
+      "category": "",
+      "difficulty": "medium",
+      "content": "FHIR architectural principles are:",
+      "options": [
+        "Scalability, readability, reuse and simplicity",
+        "Scalability, usability, all-inclusive and performance",
+        "Simplicity, re-usability, inexpensive and open source",
+        "Strongly typed, scalability, performance and easy to implement"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 811,
+      "category": "",
+      "difficulty": "medium",
+      "content": "The four supported FHIR paradigms of exchange are:",
+      "options": [
+        "Documents, messages, services and resources",
+        "Messages, services, documents and RESTful interface",
+        "RESTful, documents, messages and trigger events",
+        "Resources, messages, documents and templates"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 812,
+      "category": "",
+      "difficulty": "medium",
+      "content": "An artifact assigned Maturity Level FMMS has been implemented in at least ______ independent production systems in more than one country:",
+      "options": [
+        "5",
+        "15",
+        "1",
+        "8"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 813,
+      "category": "",
+      "difficulty": "medium",
+      "content": "Which of the following statements about a Resource is correct?",
+      "options": [
+        "A Resource is an entity that has an Unknown identity.",
+        "A Resource includes metadata in the actual resource.",
+        "A Resource contains a set of structured data items as described by the definition of the resource type.",
+        "A Resource does not change version if the contents of the resource change."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 814,
+      "category": "",
+      "difficulty": "medium",
+      "content": "A single system acts as a source of truth for a particular resource type and all other systems cease maintaining local information and instead merely reference resources on the central server.",
+      "options": [
+        "Source-of-truth registry",
+        "Linked resources",
+        "independent resources",
+        "Shared registry"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 815,
+      "category": "",
+      "difficulty": "medium",
+      "content": "Which resource does NOT extend the Domain Resource?",
+      "options": [
+        "Capability Statement",
+        "Provenance",
+        "Parameters",
+        "Organization"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 816,
+      "category": "",
+      "difficulty": "medium",
+      "content": "The following is NOT part of the Resource metadata:",
+      "options": [
+        "Security",
+        "Version",
+        "Profile",
+        "Language"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 817,
+      "category": "",
+      "difficulty": "medium",
+      "content": "Which is a backbone element of the patient resource?",
+      "options": [
+        "Managing Organization",
+        "Link",
+        "General Practitioner",
+        "Telecom"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 818,
+      "category": "",
+      "difficulty": "medium",
+      "content": "After surgery, a dietician plans for a weight loss program. Which of the below resources is best suited to describe this information?",
+      "options": [
+        "CarePlan",
+        "Goal",
+        "CareTeam",
+        "NutritionOrder"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },{
+      "id": 819,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the below id is unique for a patient Resource?",
+      "options": [
+        "MRN",
+        "Resource ID",
+        "MPI",
+        "UR"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 820,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "A medication order is generated for a patient. Which of the following FHIR resources can be used to represent this?",
+      "options": [
+        "MedicationRequest and Care Plan",
+        "Medication and MedicationAdministration",
+        "MedicationRequest and MedicationStatement",
+        "Medication and MedicationRequest"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 821,
+      "category": "healthcare",
+      "difficulty": "easy",
+      "content": "The Patient Resource is part of the ____ subcategory.",
+      "options": [
+        "Clinical",
+        "Person",
+        "Base",
+        "Demographic"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 822,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which references to a custom agreement that describes how the resource is being used.",
+      "options": [
+        "Constraints",
+        "Narrative",
+        "Metadata",
+        "Implicit Rules"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 823,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which abstract resource is never created directly; instead, one of its descendant resources is created?",
+      "options": [
+        "Resource",
+        "Domain Resource",
+        "Bundle",
+        "Binary"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 824,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which approach is suitable for use when trading resources across closed ecosystem boundaries?",
+      "options": [
+        "Relative References",
+        "Internal References",
+        "Canonical References",
+        "Absolute References"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 825,
+      "category": "healthcare",
+      "difficulty": "easy",
+      "content": "When resolving references, references are resolved by looking through the container resource.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 826,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which is the common reusable pattern of parts of a FHIR resource?",
+      "options": [
+        "Format Types",
+        "Elements",
+        "Tags",
+        "Data Types"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 827,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The following is NOT a FHIR standard status:",
+      "options": [
+        "Trial Use",
+        "Normative",
+        "Mandatory",
+        "Draft"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 828,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following characteristics is shared by all resources?",
+      "options": [
+        "Metadata.",
+        "Common set of data.",
+        "References to other resources.",
+        "Common data type that define reusable patterns of Elements."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 829,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The information to be presented in Narrative is determined by:",
+      "options": [
+        "Value",
+        "Modifier",
+        "url",
+        "Status"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 830,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What is required to be specified for an extension?",
+      "options": [
+        "Value",
+        "Modifier",
+        "url",
+        "Status"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 831,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "A container includes resources that ",
+      "options": [
+        "each can have an independent existence",
+        "each loses its independence",
+        "are grouped for clinical trials",
+        "is a list, for example a set of medications"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 832,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following shall not be present in an XHTML content?",
+      "options": [
+        "div",
+        "non-white space content",
+        "external style sheet",
+        "style"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 833,
+      "category": "healthcare",
+      "difficulty": "easy",
+      "content": "For XML, the character encoding is required.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 834,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which standard level describes the content to be well reviewed and is considered to be ready for use in production systems?",
+      "options": [
+        "Trial Use",
+        "Normative",
+        "Informative",
+        "Draft"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 835,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The content maintained by another standard is labeled as:",
+      "options": [
+        "Informative",
+        "STU",
+        "External",
+        "Draft"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 836,
+      "category": "healthcare",
+      "difficulty": "hard",
+      "content": "Which is NOT a characteristic of the FMM3 maturity level?",
+      "options": [
+        "There have been no warnings during the build process",
+        "It has been tested among at least 3 different systems",
+        "There have been multiple prototype implementations",
+        "It has gone through a round of formal balloting"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 837,
+      "category": "healthcare",
+      "difficulty": "hard",
+      "content": "The FHIR version can be determined by one of the three methods:",
+      "options": [
+        "fhirVersion, metadata, Implementation guide.",
+        "fhirVersion, Implementation guide, Id.",
+        "fhirVersion, fhirVersion Parameter, Implementation guide.",
+        "fhirVersion, fhirVersion Parameter, Resource.meta."
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 838,
+      "category": "healthcare",
+      "difficulty": "hard",
+      "content": "Which of the statements below does NOT conform to the rules for modifier extensions?",
+      "options": [
+        "A Modifier Extension shall only modify the element which contains it and/or that element's children.",
+        "It shall always be safe to show the narrative to humans; any modifier extension shall be represented in the narrative.",
+        "Applications shall always ensure unrecognized modifier extensions are present when processing the data from any element that might have carry modifier extensions.",
+        "If a Modifier Extension that an application does not understand is present, the application shall refuse to process the resource or affected element."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 839,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "If the narrative reflects the impact of all modifier extensions that extend elements that are themselves described by the narrative, it is indicated by the narrative:",
+      "options": [
+        "Contents",
+        "Status",
+        "Extensions",
+        "Link"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 840,
+      "category": "healthcare",
+      "difficulty": "easy",
+      "content": "Revisions to an extension may extend the set of contexts in which the extension applies and shall remove or constrain any previously listed context.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 841,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "A collection of resources that can have independent existence is called a:",
+      "options": [
+        "Bundle",
+        "Manifest",
+        "Vocabulary",
+        "Listing"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 842,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following listed item is represented as a bundle?",
+      "options": [
+        "Message",
+        "Medication",
+        "Request",
+        "Patient Resource"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 843,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "FHIR supports Level 3 conformance using ___",
+      "options": [
+        "Modifiers",
+        "Capability Statement",
+        "Extensions",
+        "Asynchronous use pattern"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 844,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "FHIR server shall specify which interactions and resources are supported using",
+      "options": [
+        "Modifiers",
+        "Capability Statement",
+        "Extensions",
+        "Asynchronous use pattern"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 845,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following is NOT an interaction on the Resource?",
+      "options": [
+        "Update",
+        "Create",
+        "Search",
+        "History"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 846,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What is used as a prefix to disambiguate reserved name from other name to differentiate search, history and similar interactions from instances of a resource type.",
+      "options": [
+        "$",
+        "/",
+        "$?",
+        "_"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 847,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What does the status code 4xx indicate?",
+      "options": [
+        "success",
+        "pending",
+        "error",
+        "out of resources"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 848,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which is the correct representation to add a profile to a resource?",
+      "options": [
+        "[base]/[Resource][id]/$meta-add",
+        "[base]/[Resource]/$meta-add",
+        "[base]/[id]/$meta-add",
+        "[base]/$meta-add"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 849,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The advanced search option uses the _______ parameter.",
+      "options": [
+        "_find",
+        "_query",
+        "_search",
+        "_advanced"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 850,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which services are supported by FHIR specification?",
+      "options": [
+        "Patient Reconciliation Service",
+        "Conversion Service",
+        "Questionnaire Service",
+        "Knowledge Repository"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 851,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The following is NOT a search result parameter:",
+      "options": [
+        "sort",
+        "export",
+        "count",
+        "summary"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 852,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which search parameter type is NOT supported by FHIR?",
+      "options": [
+        "Number",
+        "Integer",
+        "String",
+        "Special"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 853,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "What status code will be returned when a parameter causes a search that is out of scope?",
+      "options": [
+        "304",
+        "403",
+        "406",
+        "5xx"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 854,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "You would be able to specify that a data element is supported by a system and the system will actually be able to persist and return this data in its query by defining the following:",
+      "options": [
+        "isModifier = true",
+        "mustSupport = true",
+        "isModifierReason = true",
+        "isSummary = true"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 855,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which resource will be returned in case of errors or failure responses?",
+      "options": [
+        "EventResponse",
+        "CommunicationResponse",
+        "MessageResponse",
+        "OperationOutcome"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 856,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "When a resource update is rejected based on business rules, what would NOT be a reason returned by a FHIR server?",
+      "options": [
+        "The resource could not be parsed or failed basic FHIR validation rules",
+        "The Resource type is not supported, or not a valid FHIR end-point",
+        "Authorization is required for the attempted interaction",
+        "Status code 200"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 857,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The PATCH parameter can NOT include the following operation:",
+      "options": [
+        "delete",
+        "move",
+        "update",
+        "insert"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 858,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The Document bundle shall have as a minimum the ______ Resources.",
+      "options": [
+        "Binary, Observation and ObservationResult",
+        "Composition, Binary and Provenance",
+        "Composition, Observation and MedicationResult",
+        "Composition, Conformance and Provenance"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 859,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which is the mandatory identifier of FHIR Documents?",
+      "options": [
+        "Business Identifier",
+        "Composition Identifier",
+        "Document Identifier",
+        "Resource Identifier"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 860,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which are the mandatory dates stored in Documents?",
+      "options": [
+        "Document and Composition Date",
+        "Composition and Attestation Date",
+        "Attestation and last modified Date",
+        "Last modified date and Procedure Date"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 861,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which is the valid end point when working with Documents?",
+      "options": [
+        "[baseurl]/[id]/Bundle",
+        "[baseurl]/[Resource]/Bundle",
+        "[baseurl]/[Resource]/[id]/Bundle",
+        "[baseurl]/Bundle"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 862,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "FHIR can be used to exchange traditional CDA R2 documents making use of the DocumentReference resource and handling the CDA document itself as a binary attachment.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 863,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Binary Resources can be used to handle content such as:",
+      "options": [
+        "Media",
+        "HTML",
+        "CDA/ PDF Resources",
+        "DICOM"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 864,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Binary Resource is represented in:",
+      "options": [
+        "FHIR XHTML format when wrapped in a Bundle",
+        "FHIR Composite model",
+        "FHIR XHTML format",
+        "Native format when wrapped in a Bundle"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 865,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following statement is true with respect to Binary resource?",
+      "options": [
+        "Content type is optional, if not specified, it takes it as json.",
+        "Requires security context for all transactions.",
+        "Data is optional because it is excluded when a reference is provided.",
+        "Metadata is conditional on the content."
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 866,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "FHIR can be used to exchange traditional CDA R2 documents making use of the:",
+      "options": [
+        "Composition Resource",
+        "Document Resource",
+        "Attachment Resource",
+        "Binary Resource"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 867,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "The CDA Model supports exchange of content that has:",
+      "options": [
+        "Financial Information",
+        "Capability statement",
+        "Insurance Information",
+        "Clinical Information"
+      ],
+      "correctAnswers": [
+        4
+      ],
+      "type": "single"
+    },
+    {
+      "id": 868,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "With FHIR, all clinical content in a message is handled by referencing Clinical Resources.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 869,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "CDA Markup, in FHIR, should be converted to:",
+      "options": [
+        "XML Syntax",
+        "JSON",
+        "XHTML",
+        "Profiles"
+      ],
+      "correctAnswers": [
+        3
+      ],
+      "type": "single"
+    },
+    {
+      "id": 870,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "With FHIR, narrative only exists for the resources at each section. With CDA, narrative exists at the root of each section.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswers": [
+        2
+      ],
+      "type": "single"
+    },
+    {
+      "id": 871,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following characteristics is represented by clinical document?",
+      "options": [
+        "Persistence and context",
+        "Ambiguity and authentication",
+        "Context and billing",
+        "Unauthenticated and governance data"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    },
+    {
+      "id": 872,
+      "category": "healthcare",
+      "difficulty": "medium",
+      "content": "Which of the following resources referenced by composition will not be included in the document?",
+      "options": [
+        "Composition.date",
+        "Composition.subject",
+        "Composition.attester.party",
+        "Composition.custodian"
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single"
+    }
+    
   ]
 }
