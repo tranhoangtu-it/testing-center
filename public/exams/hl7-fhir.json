@@ -14686,7 +14686,7 @@
         "Slot and Timing"
       ],
       "correctAnswers": [
-        3
+        1
       ],
       "type": "single"
     },
@@ -16048,6 +16048,71 @@
       ],
       "correctAnswers": [
         1
+      ],
+      "type": "single",
+      "explanation": "Robust terminology integration requires standard terminology operations with proper caching"
+    },
+    {
+      "id": 1004,
+      "category": "",
+      "difficulty": "hard",
+      "content": "Which statements are correct with respect to FHIR and patient privacy? (This question may have more than one correct answer, please select all that apply.)",
+      "options": [
+        "The Provenance resource can be used to record who, why, and when a resource was deleted.",
+        "An individual’s privacy preferences can be recorded using the Provenance resource.",
+        "Resources can be tagged to indicate the sensitivity or confidentiality of the data they represent."
+      ],
+      "correctAnswers": [
+        1,3
+      ],
+      "type": "multi",
+      "explanation": ""
+    },
+    {
+      "id": 1005,
+      "category": "",
+      "difficulty": "hard",
+      "content": "Which of these statements about CodeSystems and ValueSets are true?",
+      "options": [
+        "LOINC is a code system that can be used in FHIR resources.",
+        "Codes defined by CodeSystems are not case sensitive.",
+        "The meaning of a code is defined by the ValueSet that uses it."
+      ],
+      "correctAnswers": [
+        1
+      ],
+      "type": "single",
+      "explanation": "Robust terminology integration requires standard terminology operations with proper caching"
+    },
+    {
+      "id": 1006,
+      "category": "",
+      "difficulty": "hard",
+      "content": "Which statements are correct with respect to FHIR and patient privacy? (This question may have more than one correct answer, please select all that apply.)",
+      "options": [
+        "The Provenance resource can be used to record who, why, and when a resource was deleted.",
+        "An individual’s privacy preferences can be recorded using the Provenance resource.",
+        "Resources can be tagged to indicate the sensitivity or confidentiality of the data they represent."
+      ],
+      "correctAnswers": [
+        1,3
+      ],
+      "type": "multi",
+      "explanation": "Robust terminology integration requires standard terminology operations with proper caching"
+    },
+    {
+      "id": 1007,
+      "category": "",
+      "difficulty": "hard",
+      "content": "Which statements are FALSE regarding resource documentation in FHIR specification?",
+      "options": [
+        "Resource structures are represented in UML, XML, Turtle (RDF), and JSON formats.",
+        "Example Instances for the resource are provided in the defined formats.",
+        "An Excel spreadsheet representation of the resource is provided.",
+        "Mappings to other standards such as V2, V3, and CDA are provided for some resources."
+      ],
+      "correctAnswers": [
+        3
       ],
       "type": "single",
       "explanation": "Robust terminology integration requires standard terminology operations with proper caching"
